@@ -40,6 +40,7 @@
       <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0-develop00385\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
@@ -56,7 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\Prop.cs" />
+    <Compile Include="App_Code\clsUpdateRecord.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TCandCCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TCandCCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCandCCDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCandCCDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCandCCDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudentRecord.Designer.cs">
+      <DependentUpon>UpdateStudentRecord.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateStudentRecord.resx">
+      <DependentUpon>UpdateStudentRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +122,28 @@
     </None>
     <None Include="TCandCCDataSet.xss">
       <DependentUpon>TCandCCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TCandCCDataSet1.xsc">
+      <DependentUpon>TCandCCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TCandCCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCandCCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCandCCDataSet1.xss">
+      <DependentUpon>TCandCCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TCandCCDataSet2.xsc">
+      <DependentUpon>TCandCCDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TCandCCDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCandCCDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCandCCDataSet2.xss">
+      <DependentUpon>TCandCCDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

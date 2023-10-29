@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            pnlDeleteStudent.Visible = false;
+           
         }
 
         DataTableCollection tableCollection;
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
 
                             // Export to SQL Server
                             ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
-                            MessageBox.Show("Import successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Import successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
@@ -141,7 +141,7 @@ namespace WindowsFormsApp1
 
         private void deleteStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnlDeleteStudent.Visible = true;
+           
             gridShowData.Visible = false;
         }
 
@@ -155,9 +155,10 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void updateRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            UpdateStudentRecord updateStudentRecord = new UpdateStudentRecord();
+            updateStudentRecord.ShowDialog();
         }
     }
 }
