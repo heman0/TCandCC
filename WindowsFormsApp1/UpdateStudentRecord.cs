@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         public UpdateStudentRecord()
         {
             InitializeComponent();
-            fetchRecordsForUpdate();
+            fetchRecordsForUpdate(); ;
             
         }
         public void fetchRecordsForUpdate()
