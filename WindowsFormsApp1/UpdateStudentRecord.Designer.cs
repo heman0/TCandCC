@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tCandCCDataSet = new WindowsFormsApp1.TCandCCDataSet();
             this.tCandCCDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridShowDataForUpdate = new System.Windows.Forms.DataGridView();
             this.tblStudentInfoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.studentTCandCCDataSet1 = new WindowsFormsApp1.studentTCandCCDataSet1();
             this.tblStudentInfoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -46,9 +45,10 @@
             this.btnSearchRecordForUpdate = new System.Windows.Forms.Button();
             this.tbl_Student_InfoTableAdapter2 = new WindowsFormsApp1.studentTCandCCDataSetTableAdapters.tbl_Student_InfoTableAdapter();
             this.tbl_Student_InfoTableAdapter3 = new WindowsFormsApp1.studentTCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter();
+            this.gridShowDataForUpdate = new System.Windows.Forms.DataGridView();
+            this.Update = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource2)).BeginInit();
@@ -57,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // tCandCCDataSet
@@ -68,20 +69,6 @@
             // 
             this.tCandCCDataSetBindingSource.DataSource = this.tCandCCDataSet;
             this.tCandCCDataSetBindingSource.Position = 0;
-            // 
-            // gridShowDataForUpdate
-            // 
-            this.gridShowDataForUpdate.AllowUserToAddRows = false;
-            this.gridShowDataForUpdate.AllowUserToDeleteRows = false;
-            this.gridShowDataForUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gridShowDataForUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridShowDataForUpdate.Location = new System.Drawing.Point(21, 55);
-            this.gridShowDataForUpdate.Name = "gridShowDataForUpdate";
-            this.gridShowDataForUpdate.ReadOnly = true;
-            this.gridShowDataForUpdate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridShowDataForUpdate.Size = new System.Drawing.Size(774, 471);
-            this.gridShowDataForUpdate.TabIndex = 0;
-            this.gridShowDataForUpdate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridShowDataForUpdate_CellContentClick);
             // 
             // tblStudentInfoBindingSource3
             // 
@@ -156,11 +143,37 @@
             // 
             this.tbl_Student_InfoTableAdapter3.ClearBeforeFill = true;
             // 
+            // gridShowDataForUpdate
+            // 
+            this.gridShowDataForUpdate.AllowUserToAddRows = false;
+            this.gridShowDataForUpdate.AllowUserToDeleteRows = false;
+            this.gridShowDataForUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gridShowDataForUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridShowDataForUpdate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Update});
+            this.gridShowDataForUpdate.Location = new System.Drawing.Point(21, 55);
+            this.gridShowDataForUpdate.Name = "gridShowDataForUpdate";
+            this.gridShowDataForUpdate.ReadOnly = true;
+            this.gridShowDataForUpdate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridShowDataForUpdate.Size = new System.Drawing.Size(1053, 561);
+            this.gridShowDataForUpdate.TabIndex = 0;
+            this.gridShowDataForUpdate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridShowDataForUpdate_CellContentClick);
+            // 
+            // Update
+            // 
+            this.Update.HeaderText = "Update";
+            this.Update.Name = "Update";
+            this.Update.ReadOnly = true;
+            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Update.Text = "Update";
+            this.Update.UseColumnTextForLinkValue = true;
+            // 
             // UpdateStudentRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 538);
+            this.ClientSize = new System.Drawing.Size(1098, 638);
             this.Controls.Add(this.btnSearchRecordForUpdate);
             this.Controls.Add(this.txtSearchRecordForUpdate);
             this.Controls.Add(this.gridShowDataForUpdate);
@@ -169,7 +182,6 @@
             this.Load += new System.EventHandler(this.UpdateStudentRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource2)).EndInit();
@@ -178,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +199,6 @@
         #endregion
         private System.Windows.Forms.BindingSource tCandCCDataSetBindingSource;
         private TCandCCDataSet tCandCCDataSet;
-        private System.Windows.Forms.DataGridView gridShowDataForUpdate;
         private TCandCCDataSet1 tCandCCDataSet1;
         private System.Windows.Forms.BindingSource tblStudentInfoBindingSource;
         private TCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter;
@@ -202,5 +214,7 @@
         private studentTCandCCDataSet1 studentTCandCCDataSet1;
         private System.Windows.Forms.BindingSource tblStudentInfoBindingSource3;
         private studentTCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter3;
+        private System.Windows.Forms.DataGridView gridShowDataForUpdate;
+        private System.Windows.Forms.DataGridViewLinkColumn Update;
     }
 }
