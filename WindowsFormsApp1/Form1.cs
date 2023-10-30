@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
 
         private void ExportToSqlServer(DataTable dataTable, string tableName)
         {
-            string connectionString = "Data Source=DESKTOP-0FK2113;Initial Catalog=TCandCC;Integrated Security=True";
+            string connectionString = "Data Source=SDCMSSERVER\\SDCMSSQLSERVER;Initial Catalog=studentTCandCC;User ID=sdcmsm;Password=kingofring@9";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -93,9 +93,9 @@ namespace WindowsFormsApp1
                         // If the record does not exist, insert it into the table
                         using (SqlCommand insertCommand = new SqlCommand(
                             $"INSERT INTO {tableName} (EnrollmentNo, RollNo, SRNo, StudentName, FatherName, MotherName, [Address], " +
-                            "DoB, AdmissionDate, DuesClearedUpto, DateOfLeaving, ClassPassed, [Session], Attendance, Remark, StudentPic) " +
+                            "DoB, AdmissionDate, DuesClearedUpto, DateOfLeaving, ClassPassed, [Session], Attendance, Remark, StudentPicture) " +
                             "VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, " +
-                            "@DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPic)", connection))
+                            "@DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPicture)", connection))
                         {
                             // Add parameters for each column in your DataTable
                             insertCommand.Parameters.AddWithValue("@EnrollmentNo", row["EnrollmentNo"]);
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
                             insertCommand.Parameters.AddWithValue("@Session", row["Session"]);
                             insertCommand.Parameters.AddWithValue("@Attendance", row["Attendance"]);
                             insertCommand.Parameters.AddWithValue("@Remark", row["Remark"]);
-                            insertCommand.Parameters.AddWithValue("@StudentPic", row["StudentPic"]);
+                            insertCommand.Parameters.AddWithValue("@StudentPicture", row["StudentPicture"]);
 
                             insertCommand.ExecuteNonQuery();
                         }
@@ -159,6 +159,11 @@ namespace WindowsFormsApp1
         {
             UpdateStudentRecord updateStudentRecord = new UpdateStudentRecord();
             updateStudentRecord.ShowDialog();
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

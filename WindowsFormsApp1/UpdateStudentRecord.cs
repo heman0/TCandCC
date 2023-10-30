@@ -37,11 +37,7 @@ namespace WindowsFormsApp1
 
         private void UpdateStudentRecord_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tCandCCDataSet2.tbl_Student_Info' table. You can move, or remove it, as needed.
-            this.tbl_Student_InfoTableAdapter1.Fill(this.tCandCCDataSet2.tbl_Student_Info);
-            // TODO: This line of code loads data into the 'tCandCCDataSet1.tbl_Student_Info' table. You can move, or remove it, as needed.
-            this.tbl_Student_InfoTableAdapter.Fill(this.tCandCCDataSet1.tbl_Student_Info);
-
+            
         }
 
         private void btnSearchRecordForUpdate_Click(object sender, EventArgs e)

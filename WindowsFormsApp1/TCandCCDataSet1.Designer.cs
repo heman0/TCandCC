@@ -309,7 +309,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnRemark;
             
-            private global::System.Data.DataColumn columnStudentPic;
+            private global::System.Data.DataColumn columnStudentPicture;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -466,9 +466,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StudentPicColumn {
+            public global::System.Data.DataColumn StudentPictureColumn {
                 get {
-                    return this.columnStudentPic;
+                    return this.columnStudentPicture;
                 }
             }
             
@@ -525,7 +525,7 @@ namespace WindowsFormsApp1 {
                         string Session, 
                         long Attendance, 
                         string Remark, 
-                        string StudentPic) {
+                        string StudentPicture) {
                 tbl_Student_InfoRow rowtbl_Student_InfoRow = ((tbl_Student_InfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EnrollmentNo,
@@ -543,7 +543,7 @@ namespace WindowsFormsApp1 {
                         Session,
                         Attendance,
                         Remark,
-                        StudentPic};
+                        StudentPicture};
                 rowtbl_Student_InfoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_Student_InfoRow);
                 return rowtbl_Student_InfoRow;
@@ -581,7 +581,7 @@ namespace WindowsFormsApp1 {
                 this.columnSession = base.Columns["Session"];
                 this.columnAttendance = base.Columns["Attendance"];
                 this.columnRemark = base.Columns["Remark"];
-                this.columnStudentPic = base.Columns["StudentPic"];
+                this.columnStudentPicture = base.Columns["StudentPicture"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -617,8 +617,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnAttendance);
                 this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRemark);
-                this.columnStudentPic = new global::System.Data.DataColumn("StudentPic", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStudentPic);
+                this.columnStudentPicture = new global::System.Data.DataColumn("StudentPicture", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStudentPicture);
                 this.columnEnrollmentNo.AllowDBNull = false;
                 this.columnStudentName.MaxLength = 50;
                 this.columnFatherName.MaxLength = 50;
@@ -627,7 +627,7 @@ namespace WindowsFormsApp1 {
                 this.columnClassPassed.MaxLength = 50;
                 this.columnSession.MaxLength = 50;
                 this.columnRemark.MaxLength = 50;
-                this.columnStudentPic.MaxLength = 2147483647;
+                this.columnStudentPicture.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1005,17 +1005,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string StudentPic {
+            public string StudentPicture {
                 get {
                     try {
-                        return ((string)(this[this.tabletbl_Student_Info.StudentPicColumn]));
+                        return ((string)(this[this.tabletbl_Student_Info.StudentPictureColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'StudentPic\' in table \'tbl_Student_Info\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'StudentPicture\' in table \'tbl_Student_Info\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletbl_Student_Info.StudentPicColumn] = value;
+                    this[this.tabletbl_Student_Info.StudentPictureColumn] = value;
                 }
             }
             
@@ -1189,14 +1189,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsStudentPicNull() {
-                return this.IsNull(this.tabletbl_Student_Info.StudentPicColumn);
+            public bool IsStudentPictureNull() {
+                return this.IsNull(this.tabletbl_Student_Info.StudentPictureColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetStudentPicNull() {
-                this[this.tabletbl_Student_Info.StudentPicColumn] = global::System.Convert.DBNull;
+            public void SetStudentPictureNull() {
+                this[this.tabletbl_Student_Info.StudentPictureColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1374,11 +1374,11 @@ namespace WindowsFormsApp1.TCandCCDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("Session", "Session");
             tableMapping.ColumnMappings.Add("Attendance", "Attendance");
             tableMapping.ColumnMappings.Add("Remark", "Remark");
-            tableMapping.ColumnMappings.Add("StudentPic", "StudentPic");
+            tableMapping.ColumnMappings.Add("StudentPicture", "StudentPicture");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Student_Info] ([EnrollmentNo], [RollNo], [SRNo], [StudentName], [FatherName], [MotherName], [Address], [DoB], [AdmissionDate], [DuesClearedUpto], [DateOfLeaving], [ClassPassed], [Session], [Attendance], [Remark], [StudentPic]) VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, @DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPic)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Student_Info] ([EnrollmentNo], [RollNo], [SRNo], [StudentName], [FatherName], [MotherName], [Address], [DoB], [AdmissionDate], [DuesClearedUpto], [DateOfLeaving], [ClassPassed], [Session], [Attendance], [Remark], [StudentPicture]) VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, @DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPicture)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentNo", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNo", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1395,7 +1395,7 @@ namespace WindowsFormsApp1.TCandCCDataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Session", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Session", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentPic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentPic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentPicture", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentPicture", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1413,7 +1413,7 @@ namespace WindowsFormsApp1.TCandCCDataSet1TableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT EnrollmentNo, RollNo, SRNo, StudentName, FatherName, MotherName, Address, " +
                 "DoB, AdmissionDate, DuesClearedUpto, DateOfLeaving, ClassPassed, Session, Attend" +
-                "ance, Remark, StudentPic FROM dbo.tbl_Student_Info";
+                "ance, Remark, StudentPicture FROM dbo.tbl_Student_Info";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1490,7 +1490,7 @@ namespace WindowsFormsApp1.TCandCCDataSet1TableAdapters {
                     string Session, 
                     global::System.Nullable<long> Attendance, 
                     string Remark, 
-                    string StudentPic) {
+                    string StudentPicture) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((long)(EnrollmentNo));
             if ((RollNo.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((long)(RollNo.Value));
@@ -1576,11 +1576,11 @@ namespace WindowsFormsApp1.TCandCCDataSet1TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Remark));
             }
-            if ((StudentPic == null)) {
+            if ((StudentPicture == null)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(StudentPic));
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(StudentPicture));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

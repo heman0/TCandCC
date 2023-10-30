@@ -20,9 +20,9 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TCandCCDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("studentTCandCCDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TCandCCDataSet2 : global::System.Data.DataSet {
+    public partial class studentTCandCCDataSet : global::System.Data.DataSet {
         
         private tbl_Student_InfoDataTable tabletbl_Student_Info;
         
@@ -30,7 +30,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TCandCCDataSet2() {
+        public studentTCandCCDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TCandCCDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected studentTCandCCDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TCandCCDataSet2 cln = ((TCandCCDataSet2)(base.Clone()));
+            studentTCandCCDataSet cln = ((studentTCandCCDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TCandCCDataSet2";
+            this.DataSetName = "studentTCandCCDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TCandCCDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/studentTCandCCDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletbl_Student_Info = new tbl_Student_InfoDataTable();
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TCandCCDataSet2 ds = new TCandCCDataSet2();
+            studentTCandCCDataSet ds = new studentTCandCCDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -297,7 +297,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnAdmissionDate;
             
-            private global::System.Data.DataColumn columnDuesClearedUpto;
+            private global::System.Data.DataColumn columnDuesClearedUpTo;
             
             private global::System.Data.DataColumn columnDateOfLeaving;
             
@@ -311,7 +311,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnStudentPicture;
             
-            private global::System.Data.DataColumn columnTcCreated;
+            private global::System.Data.DataColumn columnTCCreated;
             
             private global::System.Data.DataColumn columnCCCreated;
             
@@ -422,9 +422,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DuesClearedUptoColumn {
+            public global::System.Data.DataColumn DuesClearedUpToColumn {
                 get {
-                    return this.columnDuesClearedUpto;
+                    return this.columnDuesClearedUpTo;
                 }
             }
             
@@ -478,9 +478,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TcCreatedColumn {
+            public global::System.Data.DataColumn TCCreatedColumn {
                 get {
-                    return this.columnTcCreated;
+                    return this.columnTCCreated;
                 }
             }
             
@@ -539,15 +539,15 @@ namespace WindowsFormsApp1 {
                         string Address, 
                         System.DateTime DoB, 
                         System.DateTime AdmissionDate, 
-                        System.DateTime DuesClearedUpto, 
+                        System.DateTime DuesClearedUpTo, 
                         System.DateTime DateOfLeaving, 
                         string ClassPassed, 
                         string Session, 
                         long Attendance, 
                         string Remark, 
                         string StudentPicture, 
-                        System.DateTime TcCreated, 
-                        System.DateTime CCCreated) {
+                        string TCCreated, 
+                        string CCCreated) {
                 tbl_Student_InfoRow rowtbl_Student_InfoRow = ((tbl_Student_InfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EnrollmentNo,
@@ -559,14 +559,14 @@ namespace WindowsFormsApp1 {
                         Address,
                         DoB,
                         AdmissionDate,
-                        DuesClearedUpto,
+                        DuesClearedUpTo,
                         DateOfLeaving,
                         ClassPassed,
                         Session,
                         Attendance,
                         Remark,
                         StudentPicture,
-                        TcCreated,
+                        TCCreated,
                         CCCreated};
                 rowtbl_Student_InfoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_Student_InfoRow);
@@ -599,14 +599,14 @@ namespace WindowsFormsApp1 {
                 this.columnAddress = base.Columns["Address"];
                 this.columnDoB = base.Columns["DoB"];
                 this.columnAdmissionDate = base.Columns["AdmissionDate"];
-                this.columnDuesClearedUpto = base.Columns["DuesClearedUpto"];
+                this.columnDuesClearedUpTo = base.Columns["DuesClearedUpTo"];
                 this.columnDateOfLeaving = base.Columns["DateOfLeaving"];
                 this.columnClassPassed = base.Columns["ClassPassed"];
                 this.columnSession = base.Columns["Session"];
                 this.columnAttendance = base.Columns["Attendance"];
                 this.columnRemark = base.Columns["Remark"];
                 this.columnStudentPicture = base.Columns["StudentPicture"];
-                this.columnTcCreated = base.Columns["TcCreated"];
+                this.columnTCCreated = base.Columns["TCCreated"];
                 this.columnCCCreated = base.Columns["CCCreated"];
             }
             
@@ -631,8 +631,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnDoB);
                 this.columnAdmissionDate = new global::System.Data.DataColumn("AdmissionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAdmissionDate);
-                this.columnDuesClearedUpto = new global::System.Data.DataColumn("DuesClearedUpto", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDuesClearedUpto);
+                this.columnDuesClearedUpTo = new global::System.Data.DataColumn("DuesClearedUpTo", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuesClearedUpTo);
                 this.columnDateOfLeaving = new global::System.Data.DataColumn("DateOfLeaving", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateOfLeaving);
                 this.columnClassPassed = new global::System.Data.DataColumn("ClassPassed", typeof(string), null, global::System.Data.MappingType.Element);
@@ -645,9 +645,9 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnRemark);
                 this.columnStudentPicture = new global::System.Data.DataColumn("StudentPicture", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStudentPicture);
-                this.columnTcCreated = new global::System.Data.DataColumn("TcCreated", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTcCreated);
-                this.columnCCCreated = new global::System.Data.DataColumn("CCCreated", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnTCCreated = new global::System.Data.DataColumn("TCCreated", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTCCreated);
+                this.columnCCCreated = new global::System.Data.DataColumn("CCCreated", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCCCreated);
                 this.columnEnrollmentNo.AllowDBNull = false;
                 this.columnStudentName.MaxLength = 50;
@@ -656,8 +656,10 @@ namespace WindowsFormsApp1 {
                 this.columnAddress.MaxLength = 200;
                 this.columnClassPassed.MaxLength = 50;
                 this.columnSession.MaxLength = 50;
-                this.columnRemark.MaxLength = 50;
+                this.columnRemark.MaxLength = 250;
                 this.columnStudentPicture.MaxLength = 2147483647;
+                this.columnTCCreated.MaxLength = 10;
+                this.columnCCCreated.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -725,7 +727,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TCandCCDataSet2 ds = new TCandCCDataSet2();
+                studentTCandCCDataSet ds = new studentTCandCCDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -939,17 +941,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DuesClearedUpto {
+            public System.DateTime DuesClearedUpTo {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletbl_Student_Info.DuesClearedUptoColumn]));
+                        return ((global::System.DateTime)(this[this.tabletbl_Student_Info.DuesClearedUpToColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DuesClearedUpto\' in table \'tbl_Student_Info\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DuesClearedUpTo\' in table \'tbl_Student_Info\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletbl_Student_Info.DuesClearedUptoColumn] = value;
+                    this[this.tabletbl_Student_Info.DuesClearedUpToColumn] = value;
                 }
             }
             
@@ -1051,26 +1053,26 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime TcCreated {
+            public string TCCreated {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletbl_Student_Info.TcCreatedColumn]));
+                        return ((string)(this[this.tabletbl_Student_Info.TCCreatedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TcCreated\' in table \'tbl_Student_Info\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TCCreated\' in table \'tbl_Student_Info\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletbl_Student_Info.TcCreatedColumn] = value;
+                    this[this.tabletbl_Student_Info.TCCreatedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime CCCreated {
+            public string CCCreated {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletbl_Student_Info.CCCreatedColumn]));
+                        return ((string)(this[this.tabletbl_Student_Info.CCCreatedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'CCCreated\' in table \'tbl_Student_Info\' is DBNull.", e);
@@ -1179,14 +1181,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDuesClearedUptoNull() {
-                return this.IsNull(this.tabletbl_Student_Info.DuesClearedUptoColumn);
+            public bool IsDuesClearedUpToNull() {
+                return this.IsNull(this.tabletbl_Student_Info.DuesClearedUpToColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDuesClearedUptoNull() {
-                this[this.tabletbl_Student_Info.DuesClearedUptoColumn] = global::System.Convert.DBNull;
+            public void SetDuesClearedUpToNull() {
+                this[this.tabletbl_Student_Info.DuesClearedUpToColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1263,14 +1265,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTcCreatedNull() {
-                return this.IsNull(this.tabletbl_Student_Info.TcCreatedColumn);
+            public bool IsTCCreatedNull() {
+                return this.IsNull(this.tabletbl_Student_Info.TCCreatedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTcCreatedNull() {
-                this[this.tabletbl_Student_Info.TcCreatedColumn] = global::System.Convert.DBNull;
+            public void SetTCCreatedNull() {
+                this[this.tabletbl_Student_Info.TCCreatedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1321,7 +1323,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
+namespace WindowsFormsApp1.studentTCandCCDataSetTableAdapters {
     
     
     /// <summary>
@@ -1454,19 +1456,19 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("DoB", "DoB");
             tableMapping.ColumnMappings.Add("AdmissionDate", "AdmissionDate");
-            tableMapping.ColumnMappings.Add("DuesClearedUpto", "DuesClearedUpto");
+            tableMapping.ColumnMappings.Add("DuesClearedUpTo", "DuesClearedUpTo");
             tableMapping.ColumnMappings.Add("DateOfLeaving", "DateOfLeaving");
             tableMapping.ColumnMappings.Add("ClassPassed", "ClassPassed");
             tableMapping.ColumnMappings.Add("Session", "Session");
             tableMapping.ColumnMappings.Add("Attendance", "Attendance");
             tableMapping.ColumnMappings.Add("Remark", "Remark");
             tableMapping.ColumnMappings.Add("StudentPicture", "StudentPicture");
-            tableMapping.ColumnMappings.Add("TcCreated", "TcCreated");
+            tableMapping.ColumnMappings.Add("TCCreated", "TCCreated");
             tableMapping.ColumnMappings.Add("CCCreated", "CCCreated");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Student_Info] ([EnrollmentNo], [RollNo], [SRNo], [StudentName], [FatherName], [MotherName], [Address], [DoB], [AdmissionDate], [DuesClearedUpto], [DateOfLeaving], [ClassPassed], [Session], [Attendance], [Remark], [StudentPicture], [TcCreated], [CCCreated]) VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, @DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPicture, @TcCreated, @CCCreated)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Student_Info] ([EnrollmentNo], [RollNo], [SRNo], [StudentName], [FatherName], [MotherName], [Address], [DoB], [AdmissionDate], [DuesClearedUpTo], [DateOfLeaving], [ClassPassed], [Session], [Attendance], [Remark], [StudentPicture], [TCCreated], [CCCreated]) VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, @DoB, @AdmissionDate, @DuesClearedUpTo, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPicture, @TCCreated, @CCCreated)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollmentNo", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollmentNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RollNo", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RollNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1477,15 +1479,15 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DoB", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DoB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdmissionDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdmissionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DuesClearedUpto", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DuesClearedUpto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DuesClearedUpTo", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DuesClearedUpTo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfLeaving", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfLeaving", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassPassed", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassPassed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Session", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Session", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Attendance", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Attendance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Remark", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Remark", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentPicture", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentPicture", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TcCreated", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TcCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CCCreated", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CCCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TCCreated", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TCCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CCCreated", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CCCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1502,8 +1504,8 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT EnrollmentNo, RollNo, SRNo, StudentName, FatherName, MotherName, Address, " +
-                "DoB, AdmissionDate, DuesClearedUpto, DateOfLeaving, ClassPassed, Session, Attend" +
-                "ance, Remark, StudentPicture, TcCreated, CCCreated FROM dbo.tbl_Student_Info";
+                "DoB, AdmissionDate, DuesClearedUpTo, DateOfLeaving, ClassPassed, Session, Attend" +
+                "ence, Remark, StudentPicture, TCCreated, CCCreated FROM dbo.tbl_Student_Info";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1511,7 +1513,7 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TCandCCDataSet2.tbl_Student_InfoDataTable dataTable) {
+        public virtual int Fill(studentTCandCCDataSet.tbl_Student_InfoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1524,9 +1526,9 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TCandCCDataSet2.tbl_Student_InfoDataTable GetData() {
+        public virtual studentTCandCCDataSet.tbl_Student_InfoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TCandCCDataSet2.tbl_Student_InfoDataTable dataTable = new TCandCCDataSet2.tbl_Student_InfoDataTable();
+            studentTCandCCDataSet.tbl_Student_InfoDataTable dataTable = new studentTCandCCDataSet.tbl_Student_InfoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1534,14 +1536,14 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TCandCCDataSet2.tbl_Student_InfoDataTable dataTable) {
+        public virtual int Update(studentTCandCCDataSet.tbl_Student_InfoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TCandCCDataSet2 dataSet) {
+        public virtual int Update(studentTCandCCDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Student_Info");
         }
         
@@ -1574,15 +1576,15 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
                     string Address, 
                     global::System.Nullable<global::System.DateTime> DoB, 
                     global::System.Nullable<global::System.DateTime> AdmissionDate, 
-                    global::System.Nullable<global::System.DateTime> DuesClearedUpto, 
+                    global::System.Nullable<global::System.DateTime> DuesClearedUpTo, 
                     global::System.Nullable<global::System.DateTime> DateOfLeaving, 
                     string ClassPassed, 
                     string Session, 
                     global::System.Nullable<long> Attendance, 
                     string Remark, 
                     string StudentPicture, 
-                    global::System.Nullable<global::System.DateTime> TcCreated, 
-                    global::System.Nullable<global::System.DateTime> CCCreated) {
+                    string TCCreated, 
+                    string CCCreated) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((long)(EnrollmentNo));
             if ((RollNo.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((long)(RollNo.Value));
@@ -1632,8 +1634,8 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((DuesClearedUpto.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(DuesClearedUpto.Value));
+            if ((DuesClearedUpTo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(DuesClearedUpTo.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
@@ -1674,17 +1676,17 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((string)(StudentPicture));
             }
-            if ((TcCreated.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(TcCreated.Value));
-            }
-            else {
+            if ((TCCreated == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((CCCreated.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(CCCreated.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(TCCreated));
+            }
+            if ((CCCreated == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(CCCreated));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1794,7 +1796,7 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TCandCCDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(studentTCandCCDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_Student_InfoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tbl_Student_Info.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1813,7 +1815,7 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TCandCCDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(studentTCandCCDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_Student_InfoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tbl_Student_Info.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1831,7 +1833,7 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TCandCCDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(studentTCandCCDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tbl_Student_InfoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tbl_Student_Info.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1873,7 +1875,7 @@ namespace WindowsFormsApp1.TCandCCDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TCandCCDataSet2 dataSet) {
+        public virtual int UpdateAll(studentTCandCCDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
