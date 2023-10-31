@@ -44,23 +44,23 @@
             this.lblAdmissionDate = new System.Windows.Forms.Label();
             this.lblDuesClearedUpto = new System.Windows.Forms.Label();
             this.lblDateOfLeaving = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtClassPassed = new System.Windows.Forms.TextBox();
             this.lblClassPassed = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtSession = new System.Windows.Forms.TextBox();
             this.lblSession = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtAttendance = new System.Windows.Forms.TextBox();
             this.lblAttendance = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtRemark = new System.Windows.Forms.TextBox();
             this.lblRemark = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtTCCreated = new System.Windows.Forms.TextBox();
             this.lblTCCreated = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtCCCreated = new System.Windows.Forms.TextBox();
             this.lblCCCreated = new System.Windows.Forms.Label();
             this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.dateAdmissionDate = new System.Windows.Forms.DateTimePicker();
             this.dateDuesCleared = new System.Windows.Forms.DateTimePicker();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dateLeaving = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblEnroll
@@ -202,12 +202,12 @@
             this.lblDateOfLeaving.TabIndex = 18;
             this.lblDateOfLeaving.Text = "Date Of Leaving";
             // 
-            // textBox9
+            // txtClassPassed
             // 
-            this.textBox9.Location = new System.Drawing.Point(740, 343);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(140, 20);
-            this.textBox9.TabIndex = 21;
+            this.txtClassPassed.Location = new System.Drawing.Point(740, 343);
+            this.txtClassPassed.Name = "txtClassPassed";
+            this.txtClassPassed.Size = new System.Drawing.Size(140, 20);
+            this.txtClassPassed.TabIndex = 21;
             // 
             // lblClassPassed
             // 
@@ -218,12 +218,12 @@
             this.lblClassPassed.TabIndex = 20;
             this.lblClassPassed.Text = "Class Passed";
             // 
-            // textBox10
+            // txtSession
             // 
-            this.textBox10.Location = new System.Drawing.Point(740, 51);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(140, 20);
-            this.textBox10.TabIndex = 23;
+            this.txtSession.Location = new System.Drawing.Point(740, 51);
+            this.txtSession.Name = "txtSession";
+            this.txtSession.Size = new System.Drawing.Size(140, 20);
+            this.txtSession.TabIndex = 23;
             // 
             // lblSession
             // 
@@ -234,12 +234,12 @@
             this.lblSession.TabIndex = 22;
             this.lblSession.Text = "Session";
             // 
-            // textBox11
+            // txtAttendance
             // 
-            this.textBox11.Location = new System.Drawing.Point(740, 108);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(140, 20);
-            this.textBox11.TabIndex = 25;
+            this.txtAttendance.Location = new System.Drawing.Point(740, 108);
+            this.txtAttendance.Name = "txtAttendance";
+            this.txtAttendance.Size = new System.Drawing.Size(140, 20);
+            this.txtAttendance.TabIndex = 25;
             // 
             // lblAttendance
             // 
@@ -250,12 +250,12 @@
             this.lblAttendance.TabIndex = 24;
             this.lblAttendance.Text = "Attendance";
             // 
-            // textBox12
+            // txtRemark
             // 
-            this.textBox12.Location = new System.Drawing.Point(740, 164);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(140, 20);
-            this.textBox12.TabIndex = 27;
+            this.txtRemark.Location = new System.Drawing.Point(740, 164);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(140, 20);
+            this.txtRemark.TabIndex = 27;
             // 
             // lblRemark
             // 
@@ -264,14 +264,14 @@
             this.lblRemark.Name = "lblRemark";
             this.lblRemark.Size = new System.Drawing.Size(49, 13);
             this.lblRemark.TabIndex = 26;
-            this.lblRemark.Text = "Remarks";
+            this.lblRemark.Text = "Remark";
             // 
-            // textBox13
+            // txtTCCreated
             // 
-            this.textBox13.Location = new System.Drawing.Point(740, 223);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(140, 20);
-            this.textBox13.TabIndex = 29;
+            this.txtTCCreated.Location = new System.Drawing.Point(740, 223);
+            this.txtTCCreated.Name = "txtTCCreated";
+            this.txtTCCreated.Size = new System.Drawing.Size(140, 20);
+            this.txtTCCreated.TabIndex = 29;
             // 
             // lblTCCreated
             // 
@@ -282,12 +282,12 @@
             this.lblTCCreated.TabIndex = 28;
             this.lblTCCreated.Text = "TC Created";
             // 
-            // textBox14
+            // txtCCCreated
             // 
-            this.textBox14.Location = new System.Drawing.Point(740, 284);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(140, 20);
-            this.textBox14.TabIndex = 31;
+            this.txtCCCreated.Location = new System.Drawing.Point(740, 284);
+            this.txtCCCreated.Name = "txtCCCreated";
+            this.txtCCCreated.Size = new System.Drawing.Size(140, 20);
+            this.txtCCCreated.TabIndex = 31;
             // 
             // lblCCCreated
             // 
@@ -328,34 +328,34 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker4
+            // dateLeaving
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(258, 506);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(140, 20);
-            this.dateTimePicker4.TabIndex = 36;
+            this.dateLeaving.Location = new System.Drawing.Point(258, 506);
+            this.dateLeaving.Name = "dateLeaving";
+            this.dateLeaving.Size = new System.Drawing.Size(140, 20);
+            this.dateLeaving.TabIndex = 36;
             // 
             // UpdateStudentRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 576);
-            this.Controls.Add(this.dateTimePicker4);
+            this.Controls.Add(this.dateLeaving);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dateDuesCleared);
             this.Controls.Add(this.dateAdmissionDate);
             this.Controls.Add(this.dateDOB);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtCCCreated);
             this.Controls.Add(this.lblCCCreated);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.txtTCCreated);
             this.Controls.Add(this.lblTCCreated);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.lblRemark);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtAttendance);
             this.Controls.Add(this.lblAttendance);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtSession);
             this.Controls.Add(this.lblSession);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtClassPassed);
             this.Controls.Add(this.lblClassPassed);
             this.Controls.Add(this.lblDateOfLeaving);
             this.Controls.Add(this.lblDuesClearedUpto);
@@ -399,22 +399,22 @@
         private System.Windows.Forms.Label lblAdmissionDate;
         private System.Windows.Forms.Label lblDuesClearedUpto;
         private System.Windows.Forms.Label lblDateOfLeaving;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtClassPassed;
         private System.Windows.Forms.Label lblClassPassed;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtSession;
         private System.Windows.Forms.Label lblSession;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtAttendance;
         private System.Windows.Forms.Label lblAttendance;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label lblRemark;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtTCCreated;
         private System.Windows.Forms.Label lblTCCreated;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtCCCreated;
         private System.Windows.Forms.Label lblCCCreated;
         private System.Windows.Forms.DateTimePicker dateDOB;
         private System.Windows.Forms.DateTimePicker dateAdmissionDate;
         private System.Windows.Forms.DateTimePicker dateDuesCleared;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateLeaving;
     }
 }

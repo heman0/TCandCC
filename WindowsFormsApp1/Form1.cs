@@ -5,6 +5,8 @@ using System.IO;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections.Generic;
+using System.Configuration;
+
 
 namespace WindowsFormsApp1
 {
@@ -76,7 +78,7 @@ namespace WindowsFormsApp1
 
         private void ExportToSqlServer(DataTable dataTable, string tableName)
         {
-            string connectionString = "Data Source=SDCMSSERVER\\SDCMSSQLSERVER;Initial Catalog=studentTCandCC;User ID=sdcmsm;Password=kingofring@9";
+            string connectionString = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.TCandCCConnectionString"].ToString();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

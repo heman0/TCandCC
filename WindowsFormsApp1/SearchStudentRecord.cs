@@ -51,16 +51,17 @@ namespace WindowsFormsApp1
                 string duesCleared = selectedRow.Cells["DuesClearedUpto"].Value?.ToString() ?? string.Empty;
                 string dateOfLeaving = selectedRow.Cells["DateOfLeaving"].Value?.ToString() ?? string.Empty;
                 string classPassed = selectedRow.Cells["ClassPassed"].Value?.ToString() ?? string.Empty;
-                string session = selectedRow.Cells["Sesssion"].Value?.ToString() ?? string.Empty;
+                string session = selectedRow.Cells["Session"].Value?.ToString() ?? string.Empty;
                 long attendance = Convert.ToInt32(selectedRow.Cells["Attendance"].Value?.ToString() ?? string.Empty);
                 string studentPicture = selectedRow.Cells["StudentPicture"].Value?.ToString() ?? string.Empty;
+                string Remark = selectedRow.Cells["Remark"].Value?.ToString() ?? string.Empty;
                 string tcCreated = selectedRow.Cells["TCCreated"].Value?.ToString() ?? string.Empty;
                 string ccCreated = selectedRow.Cells["CCCreated"].Value?.ToString() ?? string.Empty;
 
 
                 // Do something with the data, for example, open a form for updating the selected record
-                UpdateStudentRecord updateForm = new UpdateStudentRecord(EnrollmentID, RollNo, name, fatherName, motherName, address, dob, admissionDate, duesCleared, dateOfLeaving, classPassed, session, attendance, studentPicture, tcCreated, ccCreated);
-                updateForm.fillData();
+                UpdateStudentRecord updateForm = new UpdateStudentRecord();
+                updateForm.fillData(EnrollmentID, RollNo, name, fatherName, motherName, address, dob, admissionDate, duesCleared, dateOfLeaving, classPassed, session, attendance,Remark, studentPicture, tcCreated, ccCreated);
                 updateForm.ShowDialog();
             }
 

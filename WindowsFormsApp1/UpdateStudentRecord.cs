@@ -20,12 +20,23 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        public void fillData(long EnrollmentID,long RollNo,string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeaving, string classPassed, string session,long attendance, string studentPicture, string tcCreated, string ccCreated)
+        public void fillData(long EnrollmentID, long RollNo, string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeave, string classPassed, string session, long attendance,string Remark, string studentPicture, string tcCreated, string ccCreated)
         {
-           lblEnroll.Text=EnrollmentID.ToString();
+            lblEnrollmentValue.Text = EnrollmentID.ToString();
             lblRollValue.Text = RollNo.ToString();
             txtName.Text = name;
-            
+            txtFatherName.Text = fatherName;
+            txtMotherName.Text = motherName;
+            txtAddress.Text= address;
+            dateDOB.Text = dob;
+            dateDuesCleared.Text= duesCleared;
+            dateAdmissionDate.Text = admissionDate;
+            dateLeaving.Text = dateOfLeave;
+            txtClassPassed.Text = classPassed;
+            txtSession.Text= session;
+            txtAttendance.Text = attendance.ToString();
+            txtRemark.Text = Remark;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,7 +51,7 @@ namespace WindowsFormsApp1
 
         private void UpdateStudentRecord_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
