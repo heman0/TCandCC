@@ -28,193 +28,393 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tCandCCDataSet = new WindowsFormsApp1.TCandCCDataSet();
-            this.tCandCCDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblStudentInfoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTCandCCDataSet1 = new WindowsFormsApp1.studentTCandCCDataSet1();
-            this.tblStudentInfoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTCandCCDataSet = new WindowsFormsApp1.studentTCandCCDataSet();
-            this.tblStudentInfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tCandCCDataSet2 = new WindowsFormsApp1.TCandCCDataSet2();
-            this.tblStudentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tCandCCDataSet1 = new WindowsFormsApp1.TCandCCDataSet1();
-            this.tbl_Student_InfoTableAdapter = new WindowsFormsApp1.TCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter();
-            this.tbl_Student_InfoTableAdapter1 = new WindowsFormsApp1.TCandCCDataSet2TableAdapters.tbl_Student_InfoTableAdapter();
-            this.txtSearchRecordForUpdate = new System.Windows.Forms.TextBox();
-            this.btnSearchRecordForUpdate = new System.Windows.Forms.Button();
-            this.tbl_Student_InfoTableAdapter2 = new WindowsFormsApp1.studentTCandCCDataSetTableAdapters.tbl_Student_InfoTableAdapter();
-            this.tbl_Student_InfoTableAdapter3 = new WindowsFormsApp1.studentTCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter();
-            this.gridShowDataForUpdate = new System.Windows.Forms.DataGridView();
-            this.Update = new System.Windows.Forms.DataGridViewLinkColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).BeginInit();
+            this.lblEnroll = new System.Windows.Forms.Label();
+            this.lblEnrollmentValue = new System.Windows.Forms.Label();
+            this.lblRoll = new System.Windows.Forms.Label();
+            this.lblRollValue = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFatherName = new System.Windows.Forms.TextBox();
+            this.lblFatherName = new System.Windows.Forms.Label();
+            this.txtMotherName = new System.Windows.Forms.TextBox();
+            this.lblMotherName = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblDoB = new System.Windows.Forms.Label();
+            this.lblAdmissionDate = new System.Windows.Forms.Label();
+            this.lblDuesClearedUpto = new System.Windows.Forms.Label();
+            this.lblDateOfLeaving = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.lblClassPassed = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.lblSession = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.lblAttendance = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.lblRemark = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.lblTCCreated = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.lblCCCreated = new System.Windows.Forms.Label();
+            this.dateDOB = new System.Windows.Forms.DateTimePicker();
+            this.dateAdmissionDate = new System.Windows.Forms.DateTimePicker();
+            this.dateDuesCleared = new System.Windows.Forms.DateTimePicker();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // tCandCCDataSet
+            // lblEnroll
             // 
-            this.tCandCCDataSet.DataSetName = "TCandCCDataSet";
-            this.tCandCCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblEnroll.AutoSize = true;
+            this.lblEnroll.Location = new System.Drawing.Point(60, 45);
+            this.lblEnroll.Name = "lblEnroll";
+            this.lblEnroll.Size = new System.Drawing.Size(56, 13);
+            this.lblEnroll.TabIndex = 0;
+            this.lblEnroll.Text = "Enrollment";
+            this.lblEnroll.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tCandCCDataSetBindingSource
+            // lblEnrollmentValue
             // 
-            this.tCandCCDataSetBindingSource.DataSource = this.tCandCCDataSet;
-            this.tCandCCDataSetBindingSource.Position = 0;
+            this.lblEnrollmentValue.AutoSize = true;
+            this.lblEnrollmentValue.Location = new System.Drawing.Point(255, 45);
+            this.lblEnrollmentValue.Name = "lblEnrollmentValue";
+            this.lblEnrollmentValue.Size = new System.Drawing.Size(33, 13);
+            this.lblEnrollmentValue.TabIndex = 1;
+            this.lblEnrollmentValue.Text = "value";
             // 
-            // tblStudentInfoBindingSource3
+            // lblRoll
             // 
-            this.tblStudentInfoBindingSource3.DataMember = "tbl_Student_Info";
-            this.tblStudentInfoBindingSource3.DataSource = this.studentTCandCCDataSet1;
+            this.lblRoll.AutoSize = true;
+            this.lblRoll.Location = new System.Drawing.Point(60, 88);
+            this.lblRoll.Name = "lblRoll";
+            this.lblRoll.Size = new System.Drawing.Size(45, 13);
+            this.lblRoll.TabIndex = 2;
+            this.lblRoll.Text = "Roll No.";
+            this.lblRoll.Click += new System.EventHandler(this.lblRoll_Click);
             // 
-            // studentTCandCCDataSet1
+            // lblRollValue
             // 
-            this.studentTCandCCDataSet1.DataSetName = "studentTCandCCDataSet1";
-            this.studentTCandCCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblRollValue.AutoSize = true;
+            this.lblRollValue.Location = new System.Drawing.Point(255, 88);
+            this.lblRollValue.Name = "lblRollValue";
+            this.lblRollValue.Size = new System.Drawing.Size(39, 13);
+            this.lblRollValue.TabIndex = 3;
+            this.lblRollValue.Text = "value2";
             // 
-            // tblStudentInfoBindingSource2
+            // lblName
             // 
-            this.tblStudentInfoBindingSource2.DataMember = "tbl_Student_Info";
-            this.tblStudentInfoBindingSource2.DataSource = this.studentTCandCCDataSet;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(60, 131);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 4;
+            this.lblName.Text = "Name";
             // 
-            // studentTCandCCDataSet
+            // txtName
             // 
-            this.studentTCandCCDataSet.DataSetName = "studentTCandCCDataSet";
-            this.studentTCandCCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtName.Location = new System.Drawing.Point(258, 128);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(140, 20);
+            this.txtName.TabIndex = 5;
             // 
-            // tblStudentInfoBindingSource1
+            // txtFatherName
             // 
-            this.tblStudentInfoBindingSource1.DataMember = "tbl_Student_Info";
-            this.tblStudentInfoBindingSource1.DataSource = this.tCandCCDataSet2;
+            this.txtFatherName.Location = new System.Drawing.Point(258, 178);
+            this.txtFatherName.Name = "txtFatherName";
+            this.txtFatherName.Size = new System.Drawing.Size(140, 20);
+            this.txtFatherName.TabIndex = 7;
             // 
-            // tCandCCDataSet2
+            // lblFatherName
             // 
-            this.tCandCCDataSet2.DataSetName = "TCandCCDataSet2";
-            this.tCandCCDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblFatherName.AllowDrop = true;
+            this.lblFatherName.AutoSize = true;
+            this.lblFatherName.Location = new System.Drawing.Point(60, 181);
+            this.lblFatherName.Name = "lblFatherName";
+            this.lblFatherName.Size = new System.Drawing.Size(65, 13);
+            this.lblFatherName.TabIndex = 6;
+            this.lblFatherName.Text = "FatherName";
             // 
-            // tblStudentInfoBindingSource
+            // txtMotherName
             // 
-            this.tblStudentInfoBindingSource.DataMember = "tbl_Student_Info";
-            this.tblStudentInfoBindingSource.DataSource = this.tCandCCDataSet1;
+            this.txtMotherName.Location = new System.Drawing.Point(258, 226);
+            this.txtMotherName.Name = "txtMotherName";
+            this.txtMotherName.Size = new System.Drawing.Size(140, 20);
+            this.txtMotherName.TabIndex = 9;
             // 
-            // tCandCCDataSet1
+            // lblMotherName
             // 
-            this.tCandCCDataSet1.DataSetName = "TCandCCDataSet1";
-            this.tCandCCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblMotherName.AutoSize = true;
+            this.lblMotherName.Location = new System.Drawing.Point(60, 229);
+            this.lblMotherName.Name = "lblMotherName";
+            this.lblMotherName.Size = new System.Drawing.Size(68, 13);
+            this.lblMotherName.TabIndex = 8;
+            this.lblMotherName.Text = "MotherName";
             // 
-            // tbl_Student_InfoTableAdapter
+            // txtAddress
             // 
-            this.tbl_Student_InfoTableAdapter.ClearBeforeFill = true;
+            this.txtAddress.Location = new System.Drawing.Point(258, 281);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(140, 20);
+            this.txtAddress.TabIndex = 11;
             // 
-            // tbl_Student_InfoTableAdapter1
+            // lblAddress
             // 
-            this.tbl_Student_InfoTableAdapter1.ClearBeforeFill = true;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(60, 284);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblAddress.TabIndex = 10;
+            this.lblAddress.Text = "Address";
             // 
-            // txtSearchRecordForUpdate
+            // lblDoB
             // 
-            this.txtSearchRecordForUpdate.Location = new System.Drawing.Point(21, 28);
-            this.txtSearchRecordForUpdate.Name = "txtSearchRecordForUpdate";
-            this.txtSearchRecordForUpdate.Size = new System.Drawing.Size(100, 20);
-            this.txtSearchRecordForUpdate.TabIndex = 1;
+            this.lblDoB.AutoSize = true;
+            this.lblDoB.Location = new System.Drawing.Point(60, 342);
+            this.lblDoB.Name = "lblDoB";
+            this.lblDoB.Size = new System.Drawing.Size(30, 13);
+            this.lblDoB.TabIndex = 12;
+            this.lblDoB.Text = "DOB";
             // 
-            // btnSearchRecordForUpdate
+            // lblAdmissionDate
             // 
-            this.btnSearchRecordForUpdate.Location = new System.Drawing.Point(127, 26);
-            this.btnSearchRecordForUpdate.Name = "btnSearchRecordForUpdate";
-            this.btnSearchRecordForUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchRecordForUpdate.TabIndex = 2;
-            this.btnSearchRecordForUpdate.Text = "Search";
-            this.btnSearchRecordForUpdate.UseVisualStyleBackColor = true;
-            this.btnSearchRecordForUpdate.Click += new System.EventHandler(this.btnSearchRecordForUpdate_Click);
+            this.lblAdmissionDate.AutoSize = true;
+            this.lblAdmissionDate.Location = new System.Drawing.Point(60, 398);
+            this.lblAdmissionDate.Name = "lblAdmissionDate";
+            this.lblAdmissionDate.Size = new System.Drawing.Size(80, 13);
+            this.lblAdmissionDate.TabIndex = 14;
+            this.lblAdmissionDate.Text = "Admission Date";
             // 
-            // tbl_Student_InfoTableAdapter2
+            // lblDuesClearedUpto
             // 
-            this.tbl_Student_InfoTableAdapter2.ClearBeforeFill = true;
+            this.lblDuesClearedUpto.AutoSize = true;
+            this.lblDuesClearedUpto.Location = new System.Drawing.Point(60, 456);
+            this.lblDuesClearedUpto.Name = "lblDuesClearedUpto";
+            this.lblDuesClearedUpto.Size = new System.Drawing.Size(71, 13);
+            this.lblDuesClearedUpto.TabIndex = 16;
+            this.lblDuesClearedUpto.Text = "Dues Cleared";
             // 
-            // tbl_Student_InfoTableAdapter3
+            // lblDateOfLeaving
             // 
-            this.tbl_Student_InfoTableAdapter3.ClearBeforeFill = true;
+            this.lblDateOfLeaving.AutoSize = true;
+            this.lblDateOfLeaving.Location = new System.Drawing.Point(60, 513);
+            this.lblDateOfLeaving.Name = "lblDateOfLeaving";
+            this.lblDateOfLeaving.Size = new System.Drawing.Size(85, 13);
+            this.lblDateOfLeaving.TabIndex = 18;
+            this.lblDateOfLeaving.Text = "Date Of Leaving";
             // 
-            // gridShowDataForUpdate
+            // textBox9
             // 
-            this.gridShowDataForUpdate.AllowUserToAddRows = false;
-            this.gridShowDataForUpdate.AllowUserToDeleteRows = false;
-            this.gridShowDataForUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gridShowDataForUpdate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridShowDataForUpdate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Update});
-            this.gridShowDataForUpdate.Location = new System.Drawing.Point(21, 55);
-            this.gridShowDataForUpdate.Name = "gridShowDataForUpdate";
-            this.gridShowDataForUpdate.ReadOnly = true;
-            this.gridShowDataForUpdate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridShowDataForUpdate.Size = new System.Drawing.Size(1053, 561);
-            this.gridShowDataForUpdate.TabIndex = 0;
-            this.gridShowDataForUpdate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridShowDataForUpdate_CellContentClick);
+            this.textBox9.Location = new System.Drawing.Point(740, 343);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(140, 20);
+            this.textBox9.TabIndex = 21;
             // 
-            // Update
+            // lblClassPassed
             // 
-            this.Update.HeaderText = "Update";
-            this.Update.Name = "Update";
-            this.Update.ReadOnly = true;
-            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Update.Text = "Update";
-            this.Update.UseColumnTextForLinkValue = true;
+            this.lblClassPassed.AutoSize = true;
+            this.lblClassPassed.Location = new System.Drawing.Point(542, 346);
+            this.lblClassPassed.Name = "lblClassPassed";
+            this.lblClassPassed.Size = new System.Drawing.Size(70, 13);
+            this.lblClassPassed.TabIndex = 20;
+            this.lblClassPassed.Text = "Class Passed";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(740, 51);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(140, 20);
+            this.textBox10.TabIndex = 23;
+            // 
+            // lblSession
+            // 
+            this.lblSession.AutoSize = true;
+            this.lblSession.Location = new System.Drawing.Point(542, 54);
+            this.lblSession.Name = "lblSession";
+            this.lblSession.Size = new System.Drawing.Size(44, 13);
+            this.lblSession.TabIndex = 22;
+            this.lblSession.Text = "Session";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(740, 108);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(140, 20);
+            this.textBox11.TabIndex = 25;
+            // 
+            // lblAttendance
+            // 
+            this.lblAttendance.AutoSize = true;
+            this.lblAttendance.Location = new System.Drawing.Point(542, 111);
+            this.lblAttendance.Name = "lblAttendance";
+            this.lblAttendance.Size = new System.Drawing.Size(62, 13);
+            this.lblAttendance.TabIndex = 24;
+            this.lblAttendance.Text = "Attendance";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(740, 164);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(140, 20);
+            this.textBox12.TabIndex = 27;
+            // 
+            // lblRemark
+            // 
+            this.lblRemark.AutoSize = true;
+            this.lblRemark.Location = new System.Drawing.Point(542, 167);
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.Size = new System.Drawing.Size(49, 13);
+            this.lblRemark.TabIndex = 26;
+            this.lblRemark.Text = "Remarks";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(740, 223);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(140, 20);
+            this.textBox13.TabIndex = 29;
+            // 
+            // lblTCCreated
+            // 
+            this.lblTCCreated.AutoSize = true;
+            this.lblTCCreated.Location = new System.Drawing.Point(542, 226);
+            this.lblTCCreated.Name = "lblTCCreated";
+            this.lblTCCreated.Size = new System.Drawing.Size(61, 13);
+            this.lblTCCreated.TabIndex = 28;
+            this.lblTCCreated.Text = "TC Created";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(740, 284);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(140, 20);
+            this.textBox14.TabIndex = 31;
+            // 
+            // lblCCCreated
+            // 
+            this.lblCCCreated.AutoSize = true;
+            this.lblCCCreated.Location = new System.Drawing.Point(542, 287);
+            this.lblCCCreated.Name = "lblCCCreated";
+            this.lblCCCreated.Size = new System.Drawing.Size(61, 13);
+            this.lblCCCreated.TabIndex = 30;
+            this.lblCCCreated.Text = "CC Created";
+            // 
+            // dateDOB
+            // 
+            this.dateDOB.Location = new System.Drawing.Point(258, 335);
+            this.dateDOB.Name = "dateDOB";
+            this.dateDOB.Size = new System.Drawing.Size(140, 20);
+            this.dateDOB.TabIndex = 32;
+            // 
+            // dateAdmissionDate
+            // 
+            this.dateAdmissionDate.Location = new System.Drawing.Point(258, 398);
+            this.dateAdmissionDate.Name = "dateAdmissionDate";
+            this.dateAdmissionDate.Size = new System.Drawing.Size(140, 20);
+            this.dateAdmissionDate.TabIndex = 33;
+            // 
+            // dateDuesCleared
+            // 
+            this.dateDuesCleared.Location = new System.Drawing.Point(258, 449);
+            this.dateDuesCleared.Name = "dateDuesCleared";
+            this.dateDuesCleared.Size = new System.Drawing.Size(140, 20);
+            this.dateDuesCleared.TabIndex = 34;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(545, 398);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(79, 33);
+            this.btnUpdate.TabIndex = 35;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(258, 506);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(140, 20);
+            this.dateTimePicker4.TabIndex = 36;
             // 
             // UpdateStudentRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 638);
-            this.Controls.Add(this.btnSearchRecordForUpdate);
-            this.Controls.Add(this.txtSearchRecordForUpdate);
-            this.Controls.Add(this.gridShowDataForUpdate);
+            this.ClientSize = new System.Drawing.Size(957, 576);
+            this.Controls.Add(this.dateTimePicker4);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.dateDuesCleared);
+            this.Controls.Add(this.dateAdmissionDate);
+            this.Controls.Add(this.dateDOB);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.lblCCCreated);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.lblTCCreated);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.lblRemark);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.lblAttendance);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.lblSession);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.lblClassPassed);
+            this.Controls.Add(this.lblDateOfLeaving);
+            this.Controls.Add(this.lblDuesClearedUpto);
+            this.Controls.Add(this.lblAdmissionDate);
+            this.Controls.Add(this.lblDoB);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.txtMotherName);
+            this.Controls.Add(this.lblMotherName);
+            this.Controls.Add(this.txtFatherName);
+            this.Controls.Add(this.lblFatherName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblRollValue);
+            this.Controls.Add(this.lblRoll);
+            this.Controls.Add(this.lblEnrollmentValue);
+            this.Controls.Add(this.lblEnroll);
             this.Name = "UpdateStudentRecord";
-            this.Text = "UpdateStudentRecord";
+            this.Text = "Update Records";
             this.Load += new System.EventHandler(this.UpdateStudentRecord_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridShowDataForUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource tCandCCDataSetBindingSource;
-        private TCandCCDataSet tCandCCDataSet;
-        private TCandCCDataSet1 tCandCCDataSet1;
-        private System.Windows.Forms.BindingSource tblStudentInfoBindingSource;
-        private TCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter;
-        private TCandCCDataSet2 tCandCCDataSet2;
-        private System.Windows.Forms.BindingSource tblStudentInfoBindingSource1;
-        private TCandCCDataSet2TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter1;
-        private System.Windows.Forms.TextBox txtSearchRecordForUpdate;
-        private System.Windows.Forms.Button btnSearchRecordForUpdate;
-        private studentTCandCCDataSet studentTCandCCDataSet;
-        private System.Windows.Forms.BindingSource tblStudentInfoBindingSource2;
-        private studentTCandCCDataSetTableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AttendanceDataGridViewTextBoxColumn;
-        private studentTCandCCDataSet1 studentTCandCCDataSet1;
-        private System.Windows.Forms.BindingSource tblStudentInfoBindingSource3;
-        private studentTCandCCDataSet1TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter3;
-        private System.Windows.Forms.DataGridView gridShowDataForUpdate;
-        private System.Windows.Forms.DataGridViewLinkColumn Update;
+
+        private System.Windows.Forms.Label lblEnroll;
+        private System.Windows.Forms.Label lblEnrollmentValue;
+        private System.Windows.Forms.Label lblRoll;
+        private System.Windows.Forms.Label lblRollValue;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtFatherName;
+        private System.Windows.Forms.Label lblFatherName;
+        private System.Windows.Forms.TextBox txtMotherName;
+        private System.Windows.Forms.Label lblMotherName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.Label lblDoB;
+        private System.Windows.Forms.Label lblAdmissionDate;
+        private System.Windows.Forms.Label lblDuesClearedUpto;
+        private System.Windows.Forms.Label lblDateOfLeaving;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label lblClassPassed;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label lblSession;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label lblAttendance;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label lblRemark;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label lblTCCreated;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label lblCCCreated;
+        private System.Windows.Forms.DateTimePicker dateDOB;
+        private System.Windows.Forms.DateTimePicker dateAdmissionDate;
+        private System.Windows.Forms.DateTimePicker dateDuesCleared;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
     }
 }

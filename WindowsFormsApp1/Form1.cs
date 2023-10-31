@@ -157,7 +157,7 @@ namespace WindowsFormsApp1
 
         private void updateRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateStudentRecord updateStudentRecord = new UpdateStudentRecord();
+            SearchStudentRecord updateStudentRecord = new SearchStudentRecord();
             updateStudentRecord.ShowDialog();
         }
 

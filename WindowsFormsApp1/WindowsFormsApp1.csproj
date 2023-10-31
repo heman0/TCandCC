@@ -91,6 +91,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TCandCCDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchStudentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStudentRecord.Designer.cs">
+      <DependentUpon>SearchStudentRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateStudentRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SearchStudentRecord.resx">
+      <DependentUpon>SearchStudentRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudentRecord.resx">
       <DependentUpon>UpdateStudentRecord.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,14 +1,16 @@
-﻿using System;
+﻿using ExcelDataReader.Log;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using WindowsFormsApp1.App_Code;
+using System.Xml.Linq;
+using static System.Collections.Specialized.BitVector32;
 
 namespace WindowsFormsApp1
 {
@@ -17,86 +19,28 @@ namespace WindowsFormsApp1
         public UpdateStudentRecord()
         {
             InitializeComponent();
-            fetchRecordsForUpdate();
-            // Add Resize event handler
-            this.Resize += UpdateStudentRecord_Resize;
         }
-
-        public void fetchRecordsForUpdate()
+        public void fillData(long EnrollmentID,long RollNo,string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeaving, string classPassed, string session,long attendance, string studentPicture, string tcCreated, string ccCreated)
         {
-            clsUpdateRecord upr = new clsUpdateRecord();
-            DataSet ds = upr.fetchAllRecordsForUpdate();
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                gridShowDataForUpdate.DataSource = ds.Tables[0];
-            }
-        }
-
-        private void gridShowDataForUpdate_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
+           lblEnroll.Text=EnrollmentID.ToString();
+            lblRollValue.Text = RollNo.ToString();
+            txtName.Text = name;
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
-        public void resize()
+
+        private void lblRoll_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                // Set the width to 1500 when the form is maximized
-                gridShowDataForUpdate.Width = 1530;
-                gridShowDataForUpdate.Height = 700;
-            }
-            else
-            {
-                gridShowDataForUpdate.Width = 1000;
-            }
+
         }
 
         private void UpdateStudentRecord_Load(object sender, EventArgs e)
         {
-           
-        }
-        private void UpdateStudentRecord_Resize(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                // Call the resize function when the form is maximized
-                resize();
-            }
-        }
-
-
-        private void btnSearchRecordForUpdate_Click(object sender, EventArgs e)
-        {
-            string userInput = txtSearchRecordForUpdate.Text.Trim();
-            clsUpdateRecord clsUR = new clsUpdateRecord();
-            if (userInput == "")
-            {
-                DataSet ds = clsUR.fetchAllRecordsForUpdate();
-                if (ds.Tables.Count > 0)
-                {
-                    gridShowDataForUpdate.DataSource = ds.Tables[0];
-                }
-            }
-            else if (long.TryParse(userInput, out long result))
-            {
-
-                clsUR.Roll = result;
-                clsUR.Enroll = result;
-                DataSet ds = clsUR.fetchSpecificStudentRecord();
-                {     
-                    gridShowDataForUpdate.DataSource = ds.Tables[0];
-                }
-            }
-            else
-            {
-                clsUR.name = userInput;
-                DataSet ds = clsUR.fetchSpecificStudentRecord();
-                if (ds.Tables.Count > 0)
-                {
-                    gridShowDataForUpdate.DataSource = ds.Tables[0];
-                }
-            }
+            
         }
     }
 }
