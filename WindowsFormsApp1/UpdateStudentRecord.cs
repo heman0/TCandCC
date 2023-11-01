@@ -10,19 +10,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using WindowsFormsApp1.App_Code;
 using static System.Collections.Specialized.BitVector32;
 
 namespace WindowsFormsApp1
 {
     public partial class UpdateStudentRecord : Form
     {
+        long Enrollment;
         public UpdateStudentRecord()
         {
             InitializeComponent();
+            
         }
         public void fillData(long EnrollmentID, long RollNo, string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeave, string classPassed, string session, long attendance,string Remark, string studentPicture, string tcCreated, string ccCreated)
         {
-            lblEnrollmentValue.Text = EnrollmentID.ToString();
+            Enrollment =Convert.ToInt64( EnrollmentID.ToString());
+            lblEnroll.Text = Enrollment.ToString();
             lblRollValue.Text = RollNo.ToString();
             txtName.Text = name;
             txtFatherName.Text = fatherName;
@@ -56,8 +60,26 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //string address=txtAddress.Text.Trim();
-            //string fname=txtFatherName.Text.Trim();
+            clsUpdateRecord cls=new clsUpdateRecord();
+            cls.Enroll = Enrollment;
+            cls.name = txtName.Text;
+            cls.fatherName = txtFatherName.Text;
+            cls.motherName = txtMotherName.Text;
+            cls.address = txtAddress.Text;
+            cls.classPassed=txtClassPassed.Text;
+            cls.session = txtSession.Text;
+            cls.admissionDate=dateAdmissionDate.Text;
+            cls.dateOfLeaving=dateLeaving.Text;
+            cls.duesClearedUpTo=dateDuesCleared.Text;
+            cls.dob=dateDOB.Text;
+            cls.attendance= Convert.ToInt64( txtAttendance.Text);
+            cls.remark=txtRemark.Text;
+            int res=cls.updateStudentRecord();
+            if (res>0)
+            {
+                MessageBox.Show("Updated successfully...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
     }
 }
