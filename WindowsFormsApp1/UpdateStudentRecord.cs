@@ -56,8 +56,8 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string address=txtAddress.Text.Trim();
-            string fname=txtFatherName.Text.Trim();
+            //string address=txtAddress.Text.Trim();
+            //string fname=txtFatherName.Text.Trim();
         }
     }
 }
