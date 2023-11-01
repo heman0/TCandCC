@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            string name=txtName.Text;
         }
     }
 }
