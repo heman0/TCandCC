@@ -58,6 +58,7 @@ namespace WindowsFormsApp1
         {
             //string address=txtAddress.Text.Trim();
             //string fname=txtFatherName.Text.Trim();
+            string name;
         }
     }
 }
