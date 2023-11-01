@@ -31,10 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridShowData = new System.Windows.Forms.DataGridView();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridShowData = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridShowData)).BeginInit();
             this.SuspendLayout();
@@ -43,17 +45,19 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentManagementToolStripMenuItem,
-            this.databaseToolStripMenuItem});
+            this.databaseToolStripMenuItem,
+            this.generateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1108, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1028, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // studentManagementToolStripMenuItem
             // 
             this.studentManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateRecordToolStripMenuItem});
+            this.updateRecordToolStripMenuItem,
+            this.addNewRecordToolStripMenuItem});
             this.studentManagementToolStripMenuItem.Name = "studentManagementToolStripMenuItem";
             this.studentManagementToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.studentManagementToolStripMenuItem.Text = "Student Management";
@@ -61,9 +65,16 @@
             // updateRecordToolStripMenuItem
             // 
             this.updateRecordToolStripMenuItem.Name = "updateRecordToolStripMenuItem";
-            this.updateRecordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateRecordToolStripMenuItem.Text = "Update record";
+            this.updateRecordToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.updateRecordToolStripMenuItem.Text = "Update Record";
             this.updateRecordToolStripMenuItem.Click += new System.EventHandler(this.updateRecordToolStripMenuItem_Click);
+            // 
+            // addNewRecordToolStripMenuItem
+            // 
+            this.addNewRecordToolStripMenuItem.Name = "addNewRecordToolStripMenuItem";
+            this.addNewRecordToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.addNewRecordToolStripMenuItem.Text = "Add New Record";
+            this.addNewRecordToolStripMenuItem.Click += new System.EventHandler(this.addNewRecordToolStripMenuItem_Click);
             // 
             // databaseToolStripMenuItem
             // 
@@ -77,9 +88,22 @@
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
+            // generateToolStripMenuItem
+            // 
+            this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
+            this.generateToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.generateToolStripMenuItem.Text = "Generate";
             // 
             // gridShowData
             // 
@@ -89,18 +113,11 @@
             this.gridShowData.Size = new System.Drawing.Size(899, 479);
             this.gridShowData.TabIndex = 1;
             // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 589);
+            this.ClientSize = new System.Drawing.Size(1028, 589);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.gridShowData);
             this.MainMenuStrip = this.menuStrip1;
@@ -122,9 +139,11 @@
         private System.Windows.Forms.ToolStripMenuItem studentManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
-        private System.Windows.Forms.DataGridView gridShowData;
         private System.Windows.Forms.ToolStripMenuItem updateRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewRecordToolStripMenuItem;
+        private System.Windows.Forms.DataGridView gridShowData;
     }
 }
 

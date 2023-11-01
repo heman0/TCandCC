@@ -57,7 +57,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\clsUpdateRecord.cs" />
+    <Compile Include="AddNewStudentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewStudentRecord.designer.cs">
+      <DependentUpon>AddNewStudentRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\clsManageRecords.cs" />
     <Compile Include="App_Code\SqlHelper.cs" />
     <Compile Include="App_Code\StoredProcedures.cs" />
     <Compile Include="App_Code\Utility.cs" />
@@ -106,6 +112,9 @@
     <Compile Include="UpdateStudentRecord.Designer.cs">
       <DependentUpon>UpdateStudentRecord.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewStudentRecord.resx">
+      <DependentUpon>AddNewStudentRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

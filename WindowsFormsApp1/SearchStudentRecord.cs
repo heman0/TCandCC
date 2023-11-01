@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         public void fetchRecordsForUpdate()
         {
-            clsUpdateRecord upr = new clsUpdateRecord();
+            clsManageRecords upr = new clsManageRecords();
             DataSet ds = upr.fetchAllRecordsForUpdate();
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
         private void btnSearchRecordForUpdate_Click(object sender, EventArgs e)
         {
             string userInput = txtSearchRecordForUpdate.Text.Trim();
-            clsUpdateRecord clsUR = new clsUpdateRecord();
+            clsManageRecords clsUR = new clsManageRecords();
             if (userInput == "")
             {
                 DataSet ds = clsUR.fetchAllRecordsForUpdate();

@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            clsUpdateRecord cls=new clsUpdateRecord();
+            clsManageRecords cls=new clsManageRecords();
             cls.Enroll = Enrollment;
             cls.name = txtName.Text;
             cls.fatherName = txtFatherName.Text;

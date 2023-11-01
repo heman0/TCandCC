@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Collections.Generic;
 using WindowsFormsApp1.App_Code;
+using TCandCC;
 
 namespace WindowsFormsApp1
 {
@@ -175,6 +176,12 @@ namespace WindowsFormsApp1
         private void exportToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addNewRecordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewStudentRecord ansr=new AddNewStudentRecord();
+            ansr.ShowDialog();
         }
     }
 }
