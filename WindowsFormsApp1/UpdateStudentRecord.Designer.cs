@@ -52,10 +52,6 @@
             this.lblAttendance = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.lblRemark = new System.Windows.Forms.Label();
-            this.txtTCCreated = new System.Windows.Forms.TextBox();
-            this.lblTCCreated = new System.Windows.Forms.Label();
-            this.txtCCCreated = new System.Windows.Forms.TextBox();
-            this.lblCCCreated = new System.Windows.Forms.Label();
             this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.dateAdmissionDate = new System.Windows.Forms.DateTimePicker();
             this.dateDuesCleared = new System.Windows.Forms.DateTimePicker();
@@ -204,7 +200,7 @@
             // 
             // txtClassPassed
             // 
-            this.txtClassPassed.Location = new System.Drawing.Point(740, 343);
+            this.txtClassPassed.Location = new System.Drawing.Point(740, 230);
             this.txtClassPassed.Name = "txtClassPassed";
             this.txtClassPassed.Size = new System.Drawing.Size(140, 20);
             this.txtClassPassed.TabIndex = 21;
@@ -212,7 +208,7 @@
             // lblClassPassed
             // 
             this.lblClassPassed.AutoSize = true;
-            this.lblClassPassed.Location = new System.Drawing.Point(542, 346);
+            this.lblClassPassed.Location = new System.Drawing.Point(542, 233);
             this.lblClassPassed.Name = "lblClassPassed";
             this.lblClassPassed.Size = new System.Drawing.Size(70, 13);
             this.lblClassPassed.TabIndex = 20;
@@ -262,41 +258,9 @@
             this.lblRemark.AutoSize = true;
             this.lblRemark.Location = new System.Drawing.Point(542, 167);
             this.lblRemark.Name = "lblRemark";
-            this.lblRemark.Size = new System.Drawing.Size(49, 13);
+            this.lblRemark.Size = new System.Drawing.Size(44, 13);
             this.lblRemark.TabIndex = 26;
             this.lblRemark.Text = "Remark";
-            // 
-            // txtTCCreated
-            // 
-            this.txtTCCreated.Location = new System.Drawing.Point(740, 223);
-            this.txtTCCreated.Name = "txtTCCreated";
-            this.txtTCCreated.Size = new System.Drawing.Size(140, 20);
-            this.txtTCCreated.TabIndex = 29;
-            // 
-            // lblTCCreated
-            // 
-            this.lblTCCreated.AutoSize = true;
-            this.lblTCCreated.Location = new System.Drawing.Point(542, 226);
-            this.lblTCCreated.Name = "lblTCCreated";
-            this.lblTCCreated.Size = new System.Drawing.Size(61, 13);
-            this.lblTCCreated.TabIndex = 28;
-            this.lblTCCreated.Text = "TC Created";
-            // 
-            // txtCCCreated
-            // 
-            this.txtCCCreated.Location = new System.Drawing.Point(740, 284);
-            this.txtCCCreated.Name = "txtCCCreated";
-            this.txtCCCreated.Size = new System.Drawing.Size(140, 20);
-            this.txtCCCreated.TabIndex = 31;
-            // 
-            // lblCCCreated
-            // 
-            this.lblCCCreated.AutoSize = true;
-            this.lblCCCreated.Location = new System.Drawing.Point(542, 287);
-            this.lblCCCreated.Name = "lblCCCreated";
-            this.lblCCCreated.Size = new System.Drawing.Size(61, 13);
-            this.lblCCCreated.TabIndex = 30;
-            this.lblCCCreated.Text = "CC Created";
             // 
             // dateDOB
             // 
@@ -321,12 +285,13 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(545, 398);
+            this.btnUpdate.Location = new System.Drawing.Point(545, 285);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(79, 33);
             this.btnUpdate.TabIndex = 35;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dateLeaving
             // 
@@ -345,10 +310,6 @@
             this.Controls.Add(this.dateDuesCleared);
             this.Controls.Add(this.dateAdmissionDate);
             this.Controls.Add(this.dateDOB);
-            this.Controls.Add(this.txtCCCreated);
-            this.Controls.Add(this.lblCCCreated);
-            this.Controls.Add(this.txtTCCreated);
-            this.Controls.Add(this.lblTCCreated);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.lblRemark);
             this.Controls.Add(this.txtAttendance);
@@ -407,10 +368,6 @@
         private System.Windows.Forms.Label lblAttendance;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label lblRemark;
-        private System.Windows.Forms.TextBox txtTCCreated;
-        private System.Windows.Forms.Label lblTCCreated;
-        private System.Windows.Forms.TextBox txtCCCreated;
-        private System.Windows.Forms.Label lblCCCreated;
         private System.Windows.Forms.DateTimePicker dateDOB;
         private System.Windows.Forms.DateTimePicker dateAdmissionDate;
         private System.Windows.Forms.DateTimePicker dateDuesCleared;

@@ -161,7 +161,7 @@
             // 
             // Update
             // 
-            this.Update.HeaderText = "Update";
+            this.Update.HeaderText = "";
             this.Update.Name = "Update";
             this.Update.ReadOnly = true;
             this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;

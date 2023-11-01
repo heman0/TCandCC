@@ -6,7 +6,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
-
+using System.Collections.Generic;
+using WindowsFormsApp1.App_Code;
 
 namespace WindowsFormsApp1
 {
@@ -15,7 +16,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-           
+
         }
 
         DataTableCollection tableCollection;
@@ -48,8 +49,19 @@ namespace WindowsFormsApp1
                             gridShowData.DataSource = distinctDataTable;
 
                             // Export to SQL Server
-                            ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
-                            MessageBox.Show("Import successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            try
+                            {
+                                int i = ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
+                                MessageBox.Show("Imported "+i+" records", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+                            
+
+
                         }
                     }
                 }
@@ -76,60 +88,57 @@ namespace WindowsFormsApp1
         }
 
 
-        private void ExportToSqlServer(DataTable dataTable, string tableName)
+        private int ExportToSqlServer(DataTable dataTable, string tableName)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["WindowsFormsApp1.Properties.Settings.TCandCCConnectionString"].ToString();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            int var =0;
+            foreach (DataRow row in dataTable.Rows)
             {
-                connection.Open();
+                // Check if the record already exists in the table based on the primary key
+                long enrollmentNo = Convert.ToInt64(row["EnrollmentNo"]);
+                bool recordExists = RecordExists(Utility.strconn, tableName, "EnrollmentNo", enrollmentNo);
 
-                foreach (DataRow row in dataTable.Rows)
+                if (!recordExists)
                 {
-                    // Check if the record already exists in the table based on the primary key
-                    long enrollmentNo = Convert.ToInt64(row["EnrollmentNo"]);
-                    bool recordExists = RecordExists(connection, tableName, "EnrollmentNo", enrollmentNo);
-
-                    if (!recordExists)
+                    SqlParameter[] pArr =
                     {
-                        // If the record does not exist, insert it into the table
-                        using (SqlCommand insertCommand = new SqlCommand(
-                            $"INSERT INTO {tableName} (EnrollmentNo, RollNo, SRNo, StudentName, FatherName, MotherName, [Address], " +
-                            "DoB, AdmissionDate, DuesClearedUpto, DateOfLeaving, ClassPassed, [Session], Attendance, Remark, StudentPicture) " +
-                            "VALUES (@EnrollmentNo, @RollNo, @SRNo, @StudentName, @FatherName, @MotherName, @Address, " +
-                            "@DoB, @AdmissionDate, @DuesClearedUpto, @DateOfLeaving, @ClassPassed, @Session, @Attendance, @Remark, @StudentPicture)", connection))
-                        {
-                            // Add parameters for each column in your DataTable
-                            insertCommand.Parameters.AddWithValue("@EnrollmentNo", row["EnrollmentNo"]);
-                            insertCommand.Parameters.AddWithValue("@RollNo", row["RollNo"]);
-                            insertCommand.Parameters.AddWithValue("@SRNo", row["SRNo"]);
-                            insertCommand.Parameters.AddWithValue("@StudentName", row["StudentName"]);
-                            insertCommand.Parameters.AddWithValue("@FatherName", row["FatherName"]);
-                            insertCommand.Parameters.AddWithValue("@MotherName", row["MotherName"]);
-                            insertCommand.Parameters.AddWithValue("@Address", row["Address"]);
-                            insertCommand.Parameters.AddWithValue("@DoB", row["DoB"]);
-                            insertCommand.Parameters.AddWithValue("@AdmissionDate", row["AdmissionDate"]);
-                            insertCommand.Parameters.AddWithValue("@DuesClearedUpto", row["DuesClearedUpto"]);
-                            insertCommand.Parameters.AddWithValue("@DateOfLeaving", row["DateOfLeaving"]);
-                            insertCommand.Parameters.AddWithValue("@ClassPassed", row["ClassPassed"]);
-                            insertCommand.Parameters.AddWithValue("@Session", row["Session"]);
-                            insertCommand.Parameters.AddWithValue("@Attendance", row["Attendance"]);
-                            insertCommand.Parameters.AddWithValue("@Remark", row["Remark"]);
-                            insertCommand.Parameters.AddWithValue("@StudentPicture", row["StudentPicture"]);
-
-                            insertCommand.ExecuteNonQuery();
-                        }
-                    }
+                               new SqlParameter("@action", SqlDbType.VarChar) { Value = "insertAllRecordsFromExcelFile" },
+                              new SqlParameter("@EnrollmentNo", SqlDbType.BigInt) { Value = row["EnrollmentNo"] },
+                             new SqlParameter("@rollNo", SqlDbType.BigInt) { Value = row["RollNo"] },
+                            new SqlParameter("@sRNo", SqlDbType.BigInt) { Value = row["SRNo"] },
+                             new SqlParameter("@studentName", SqlDbType.VarChar) { Value = row["StudentName"] },
+                              new SqlParameter("@fatherName", SqlDbType.VarChar) { Value = row["FatherName"] },
+                               new SqlParameter("@motherName", SqlDbType.VarChar) { Value = row["MotherName"] },
+                              new SqlParameter("@address", SqlDbType.VarChar) { Value = row["Address"] },
+                             new SqlParameter("@dob", SqlDbType.Date) { Value = row["DoB"] },
+                            new SqlParameter("@admissionDate", SqlDbType.Date) { Value = row["AdmissionDate"] },
+                             new SqlParameter("@duesClearedUpto", SqlDbType.Date) { Value = row["DuesClearedUpto"] },
+                              new SqlParameter("@dateOfLeaving", SqlDbType.Date) { Value = row["DateOfLeaving"] },
+                               new SqlParameter("@classPassed", SqlDbType.VarChar) { Value = row["ClassPassed"] },
+                              new SqlParameter("@session", SqlDbType.VarChar) { Value = row["Session"] },
+                             new SqlParameter("@attendance", SqlDbType.BigInt) { Value = row["Attendance"] },
+                            new SqlParameter("@remark", SqlDbType.VarChar) { Value = row["Remark"] },
+                             new SqlParameter("@studentPicture", SqlDbType.VarChar) { Value = row["StudentPicture"] },
+                              new SqlParameter("@tCCreated", SqlDbType.Date) { Value = row["TCCreated"] },
+                               new SqlParameter("@cCCreated", SqlDbType.Date) { Value = row["CCCreated"] },
+                        };
+                   
+                    int i = SqlHelper.ExecuteNonQuery(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
+                    var += i;
                 }
 
             }
+            return var;
+
+
         }
 
 
-        private bool RecordExists(SqlConnection connection, string tableName, string columnName, long columnValue)
+        private bool RecordExists(string connection, string tableName, string columnName, long columnValue)
         {
-            using (SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {tableName} WHERE {columnName} = @ColumnValue", connection))
+            SqlConnection con = new SqlConnection(connection);
+            using (SqlCommand command = new SqlCommand($"SELECT COUNT(*) FROM {tableName} WHERE {columnName} = @ColumnValue", con))
             {
+                con.Open();
                 command.Parameters.AddWithValue("@ColumnValue", columnValue);
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count > 0;
@@ -143,7 +152,7 @@ namespace WindowsFormsApp1
 
         private void deleteStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
             gridShowData.Visible = false;
         }
 

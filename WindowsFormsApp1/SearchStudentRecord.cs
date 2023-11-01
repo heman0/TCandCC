@@ -40,8 +40,8 @@ namespace WindowsFormsApp1
                 DataGridViewRow selectedRow = gridShowDataForUpdate.Rows[e.RowIndex];
 
                 // Assuming your DataGridView has columns with names "StudentID", "Name", "Grade", etc.
-                long EnrollmentID =Convert.ToInt32( selectedRow.Cells["EnrollmentNo"].Value?.ToString() ?? string.Empty);
-                long RollNo = Convert.ToInt32(selectedRow.Cells["RollNo"].Value?.ToString() ?? string.Empty);
+                long EnrollmentID =Convert.ToInt64( selectedRow.Cells["EnrollmentNo"].Value?.ToString() ?? string.Empty);
+                long RollNo = Convert.ToInt64(selectedRow.Cells["RollNo"].Value?.ToString() ?? string.Empty);
                 string name = selectedRow.Cells["StudentName"].Value?.ToString() ?? string.Empty;
                 string fatherName = selectedRow.Cells["FatherName"].Value?.ToString() ?? string.Empty;
                 string motherName = selectedRow.Cells["MotherName"].Value?.ToString() ?? string.Empty;
