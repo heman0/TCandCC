@@ -36,11 +36,11 @@
             this.tableAdapterManager1 = new WindowsFormsApp1.studentTCandCCDataSet1TableAdapters.TableAdapterManager();
             this.txtRoll = new System.Windows.Forms.TextBox();
             this.lblRoll = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridShowStudentRecordForCC = new System.Windows.Forms.DataGridView();
             this.groupSearchByName = new System.Windows.Forms.GroupBox();
             this.searchWithRoll = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnSearchWithRollCC = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.gridShowStudentRecordForCC)).BeginInit();
             this.groupSearchByName.SuspendLayout();
             this.searchWithRoll.SuspendLayout();
             this.SuspendLayout();
@@ -110,18 +110,17 @@
             this.lblRoll.TabIndex = 19;
             this.lblRoll.Text = "Roll No.";
             // 
-            // dataGridView1
+            // gridShowStudentRecordForCC
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridShowStudentRecordForCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 128);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1038, 407);
-            this.dataGridView1.TabIndex = 21;
-            this.dataGridView1.VirtualMode = true;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.gridShowStudentRecordForCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridShowStudentRecordForCC.Location = new System.Drawing.Point(13, 118);
+            this.gridShowStudentRecordForCC.Name = "gridShowStudentRecordForCC";
+            this.gridShowStudentRecordForCC.Size = new System.Drawing.Size(1002, 426);
+            this.gridShowStudentRecordForCC.TabIndex = 21;
+            this.gridShowStudentRecordForCC.VirtualMode = true;
             // 
             // groupSearchByName
             // 
@@ -139,7 +138,7 @@
             // 
             // searchWithRoll
             // 
-            this.searchWithRoll.Controls.Add(this.button1);
+            this.searchWithRoll.Controls.Add(this.btnSearchWithRollCC);
             this.searchWithRoll.Controls.Add(this.lblRoll);
             this.searchWithRoll.Controls.Add(this.txtRoll);
             this.searchWithRoll.Location = new System.Drawing.Point(559, 12);
@@ -148,31 +147,31 @@
             this.searchWithRoll.TabIndex = 23;
             this.searchWithRoll.TabStop = false;
             this.searchWithRoll.Text = "Search With Roll No.";
-            this.searchWithRoll.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button1
+            // btnSearchWithRollCC
             // 
-            this.button1.Location = new System.Drawing.Point(178, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearchWithRollCC.Location = new System.Drawing.Point(178, 34);
+            this.btnSearchWithRollCC.Name = "btnSearchWithRollCC";
+            this.btnSearchWithRollCC.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchWithRollCC.TabIndex = 18;
+            this.btnSearchWithRollCC.Text = "Search";
+            this.btnSearchWithRollCC.UseVisualStyleBackColor = true;
+            this.btnSearchWithRollCC.Click += new System.EventHandler(this.btnSearchWithRollCC_Click);
             // 
             // GenerateCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 557);
+            this.ClientSize = new System.Drawing.Size(1028, 557);
             this.Controls.Add(this.searchWithRoll);
             this.Controls.Add(this.groupSearchByName);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridShowStudentRecordForCC);
             this.Name = "GenerateCC";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateCC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridShowStudentRecordForCC)).EndInit();
             this.groupSearchByName.ResumeLayout(false);
             this.groupSearchByName.PerformLayout();
             this.searchWithRoll.ResumeLayout(false);
@@ -191,9 +190,9 @@
         private studentTCandCCDataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.TextBox txtRoll;
         private System.Windows.Forms.Label lblRoll;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridShowStudentRecordForCC;
         private System.Windows.Forms.GroupBox groupSearchByName;
         private System.Windows.Forms.GroupBox searchWithRoll;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearchWithRollCC;
     }
 }

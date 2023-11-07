@@ -57,7 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Code\clsUpdateRecord.cs" />
+    <Compile Include="App_Code\clsManageRecords.cs" />
     <Compile Include="App_Code\SqlHelper.cs" />
     <Compile Include="App_Code\StoredProcedures.cs" />
     <Compile Include="App_Code\Utility.cs" />
