@@ -33,8 +33,11 @@
             this.updateRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridShowData = new System.Windows.Forms.DataGridView();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gridShowData = new System.Windows.Forms.DataGridView();
+            this.generateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateTCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateCCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridShowData)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +46,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentManagementToolStripMenuItem,
-            this.databaseToolStripMenuItem});
+            this.databaseToolStripMenuItem,
+            this.generateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1108, 24);
@@ -81,6 +85,13 @@
             this.importToolStripMenuItem.Text = "Import";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // gridShowData
             // 
             this.gridShowData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -89,12 +100,27 @@
             this.gridShowData.Size = new System.Drawing.Size(899, 479);
             this.gridShowData.TabIndex = 1;
             // 
-            // exportToolStripMenuItem
+            // generateToolStripMenuItem
             // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exportToolStripMenuItem.Text = "Export";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            this.generateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generateTCToolStripMenuItem,
+            this.generateCCToolStripMenuItem});
+            this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
+            this.generateToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.generateToolStripMenuItem.Text = "Generate ";
+            // 
+            // generateTCToolStripMenuItem
+            // 
+            this.generateTCToolStripMenuItem.Name = "generateTCToolStripMenuItem";
+            this.generateTCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateTCToolStripMenuItem.Text = "Generate TC";
+            this.generateTCToolStripMenuItem.Click += new System.EventHandler(this.generateTCToolStripMenuItem_Click);
+            // 
+            // generateCCToolStripMenuItem
+            // 
+            this.generateCCToolStripMenuItem.Name = "generateCCToolStripMenuItem";
+            this.generateCCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generateCCToolStripMenuItem.Text = "Generate CC";
             // 
             // Form1
             // 
@@ -125,6 +151,9 @@
         private System.Windows.Forms.DataGridView gridShowData;
         private System.Windows.Forms.ToolStripMenuItem updateRecordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateTCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generateCCToolStripMenuItem;
     }
 }
 
