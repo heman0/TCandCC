@@ -37,6 +37,44 @@ namespace WindowsFormsApp1.App_Code
             adp.Fill(ds);
             return ds;
         }
+
+        public DataSet fetchAllRecordsForCC()
+        {
+            SqlParameter[] pArr =
+                {
+                new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchStudentRecordForCC" }
+            };
+            DataSet ds = SqlHelper.ExecuteDataset(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
+            return ds;
+        }
+        public DataSet fetchSpecifiRecordForCC()
+        {
+            DataSet ds = new DataSet();
+            if (Roll != 0)
+            {
+
+                SqlParameter[] pArr =
+                   {
+                new SqlParameter("RollNo", SqlDbType.BigInt) { Value = Roll },
+                new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchSpecficStudentRecordForCC" }
+            };
+                ds = SqlHelper.ExecuteDataset(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
+
+            }
+            else
+            {
+                SqlParameter[] pArr =
+                   {
+                new SqlParameter("RollNo", SqlDbType.BigInt) { Value = 0 },
+                new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchSpecficStudentRecordForCC" },
+                 new SqlParameter("studentName", SqlDbType.VarChar) { Value =  name},
+                  new SqlParameter("classPassed", SqlDbType.VarChar) { Value = classPassed}
+            };
+                ds = SqlHelper.ExecuteDataset(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
+               
+            }
+            return ds;
+        }
         public DataSet fetchSpecificStudentRecord()
         {
             SqlConnection conn = new SqlConnection(Utility.strconn);
@@ -96,3 +134,4 @@ namespace WindowsFormsApp1.App_Code
         }
     }
 }
+

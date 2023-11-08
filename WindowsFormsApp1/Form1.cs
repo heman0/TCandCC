@@ -179,7 +179,8 @@ namespace WindowsFormsApp1
 
         private void generateTCToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            GenerateCC gcc = new GenerateCC();
+            gcc.ShowDialog();
         }
     }
 }
