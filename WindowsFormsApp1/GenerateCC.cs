@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             // TODO: This line of code loads data into the 'studentTCandCCDataSet3.tbl_Student_Info' table. You can move, or remove it, as needed.
             this.tbl_Student_InfoTableAdapter.Fill(this.studentTCandCCDataSet3.tbl_Student_Info);
             
-            //test
+           
         }
     }
 }
