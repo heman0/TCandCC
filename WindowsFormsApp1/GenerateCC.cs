@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.App_Code;
-using System.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -97,8 +96,8 @@ namespace WindowsFormsApp1
         {
             // TODO: This line of code loads data into the 'studentTCandCCDataSet3.tbl_Student_Info' table. You can move, or remove it, as needed.
             this.tbl_Student_InfoTableAdapter.Fill(this.studentTCandCCDataSet3.tbl_Student_Info);
-            //hi
-
+            
+            //test
         }
     }
 }
