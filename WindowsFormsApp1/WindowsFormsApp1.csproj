@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>C:\Users\Admin\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>C:\Users\Admin\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>C:\Users\Admin\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\Admin\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>C:\Users\Admin\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
     </Reference>
@@ -132,6 +147,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>studentTCandCCDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="studentTCandCCDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentTCandCCDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentTCandCCDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentTCandCCDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentTCandCCDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentTCandCCDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentTCandCCDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentTCandCCDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentTCandCCDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentTCandCCDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TCandCCDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +227,7 @@
     <EmbeddedResource Include="SearchStudentRecord.resx">
       <DependentUpon>SearchStudentRecord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TcPrint.rdlc" />
     <EmbeddedResource Include="UpdateStudentRecord.resx">
       <DependentUpon>UpdateStudentRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +284,61 @@
     </None>
     <None Include="studentTCandCCDataSet3.xss">
       <DependentUpon>studentTCandCCDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet4.xsc">
+      <DependentUpon>studentTCandCCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentTCandCCDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentTCandCCDataSet4.xss">
+      <DependentUpon>studentTCandCCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet5.xsc">
+      <DependentUpon>studentTCandCCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentTCandCCDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentTCandCCDataSet5.xss">
+      <DependentUpon>studentTCandCCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet6.xsc">
+      <DependentUpon>studentTCandCCDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentTCandCCDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentTCandCCDataSet6.xss">
+      <DependentUpon>studentTCandCCDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet7.xsc">
+      <DependentUpon>studentTCandCCDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentTCandCCDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentTCandCCDataSet7.xss">
+      <DependentUpon>studentTCandCCDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet8.xsc">
+      <DependentUpon>studentTCandCCDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="studentTCandCCDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentTCandCCDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentTCandCCDataSet8.xss">
+      <DependentUpon>studentTCandCCDataSet8.xsd</DependentUpon>
     </None>
     <None Include="TCandCCDataSet.xsc">
       <DependentUpon>TCandCCDataSet.xsd</DependentUpon>

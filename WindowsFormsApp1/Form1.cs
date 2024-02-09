@@ -6,67 +6,69 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Collections.Generic;
 using WindowsFormsApp1.App_Code;
-
+using ComponentFactory.Krypton.Toolkit;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        bool sidebarExpand;
         public Form1()
         {
             InitializeComponent();
+            panel3.Visible=false;
+
 
         }
 
         DataTableCollection tableCollection;
 
-        private void importToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
-            {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                    {
-                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
-                        {
-                            DataSet ds = reader.AsDataSet(new ExcelDataSetConfiguration()
-                            {
-                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
-                                {
-                                    UseHeaderRow = true
-                                }
-                            });
+        //private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+        //    {
+        //        if (openFileDialog.ShowDialog() == DialogResult.OK)
+        //        {
+        //            using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+        //            {
+        //                using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+        //                {
+        //                    DataSet ds = reader.AsDataSet(new ExcelDataSetConfiguration()
+        //                    {
+        //                        ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+        //                        {
+        //                            UseHeaderRow = true
+        //                        }
+        //                    });
 
-                            tableCollection = ds.Tables;
-                            DataTable dt = tableCollection[0];
+        //                    tableCollection = ds.Tables;
+        //                    DataTable dt = tableCollection[0];
 
-                            // Get distinct records based on the EnrollmentNo
-                            DataTable distinctDataTable = RemoveDuplicates(dt, "EnrollmentNo");
+        //                    // Get distinct records based on the EnrollmentNo
+        //                    DataTable distinctDataTable = RemoveDuplicates(dt, "EnrollmentNo");
 
-                            // Set the DataGridView.DataSource to the distinct view
-                            gridShowData.DataSource = distinctDataTable;
+        //                    // Set the DataGridView.DataSource to the distinct view
+        //                    gridShowData.DataSource = distinctDataTable;
 
-                            // Export to SQL Server
-                            try
-                            {
-                                int i = ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
-                                MessageBox.Show("Imported "+i+" records", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+        //                    // Export to SQL Server
+        //                    try
+        //                    {
+        //                        int i = ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
+        //                        MessageBox.Show("Imported "+i+" records", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    }
+        //                    catch (Exception ex)
+        //                    {
+        //                        MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                    }
 
                             
 
 
-                        }
-                    }
-                }
-            }
-        }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
         private DataTable RemoveDuplicates(DataTable dataTable, string primaryKeyColumnName)
         {
             var uniqueKeys = new HashSet<string>();
@@ -179,8 +181,126 @@ namespace WindowsFormsApp1
 
         private void generateTCToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            GenerateTC gcc = new GenerateTC();
+            gcc.ShowDialog();
+
+        }
+       
+
+        private void generateCCToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
             GenerateCC gcc = new GenerateCC();
             gcc.ShowDialog();
+        }
+
+        private void gridShowData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnGenerateTC_Click(object sender, EventArgs e)
+        {
+            GenerateCC gcc=new GenerateCC();
+            gcc.ShowDialog();
+        }
+
+        private void generateTC_Click(object sender, EventArgs e)
+        {
+            GenerateTC generateTC=new GenerateTC();
+            generateTC.ShowDialog();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sideBarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sideBarContainter.Width -= 10;
+                if (sideBarContainter.Width == sideBarContainter.MinimumSize.Width)
+                {
+                    sidebarExpand= false; 
+                    sideBarTimer.Stop();
+                }
+            }
+            else
+            {
+                sideBarContainter.Width += 10;
+                if (sideBarContainter.Width == sideBarContainter.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sideBarTimer.Stop();
+                }
+            }
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            sideBarTimer.Start();
+        }
+
+        private void updateRecord_Click(object sender, EventArgs e)
+        {
+            SearchStudentRecord updateStudentRecord = new SearchStudentRecord();
+            updateStudentRecord.ShowDialog();
+        }
+
+        private void importRecords_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                        {
+                            DataSet ds = reader.AsDataSet(new ExcelDataSetConfiguration()
+                            {
+                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                                {
+                                    UseHeaderRow = true
+                                }
+                            });
+
+                            tableCollection = ds.Tables;
+                            DataTable dt = tableCollection[0];
+
+                            // Get distinct records based on the EnrollmentNo
+                            DataTable distinctDataTable = RemoveDuplicates(dt, "EnrollmentNo");
+
+                            // Set the DataGridView.DataSource to the distinct view
+                            panel3.Visible = true;
+                            gridShowData.DataSource = distinctDataTable;
+
+                            // Export to SQL Server
+                            try
+                            {
+                                int i = ExportToSqlServer(distinctDataTable, "tbl_Student_Info");
+                                MessageBox.Show("Imported " + i + " records", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+
+
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentTCandCCDataSet5.tbl_Student_Info' table. You can move, or remove it, as needed.
+            this.tbl_Student_InfoTableAdapter.Fill(this.studentTCandCCDataSet5.tbl_Student_Info);
+
         }
     }
 }

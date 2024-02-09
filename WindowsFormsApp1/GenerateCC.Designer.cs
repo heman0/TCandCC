@@ -29,90 +29,94 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnSearchWithDetailsCC = new System.Windows.Forms.Button();
-            this.txtCourseCC = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCourseCC = new System.Windows.Forms.Label();
-            this.txtNameCC = new System.Windows.Forms.TextBox();
             this.lblNameCC = new System.Windows.Forms.Label();
             this.tableAdapterManager1 = new WindowsFormsApp1.studentTCandCCDataSet1TableAdapters.TableAdapterManager();
-            this.txtRoll = new System.Windows.Forms.TextBox();
             this.lblRoll = new System.Windows.Forms.Label();
             this.gridShowStudentRecordForCC = new System.Windows.Forms.DataGridView();
+            this.tblStudentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTCandCCDataSet3 = new WindowsFormsApp1.studentTCandCCDataSet3();
             this.groupSearchByName = new System.Windows.Forms.GroupBox();
+            this.dropCourseCC = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.buttonSpecAny1 = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.tblCoursesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTCandCCDataSet8 = new WindowsFormsApp1.studentTCandCCDataSet8();
+            this.btnSearchWithDetailsCC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtNameCC = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.tblCoursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTCandCCDataSet7 = new WindowsFormsApp1.studentTCandCCDataSet7();
+            this.tblCoursesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTCandCCDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchWithRoll = new System.Windows.Forms.GroupBox();
-            this.btnSearchWithRollCC = new System.Windows.Forms.Button();
+            this.btnSearchWithRollCC = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtRoll = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tCandCCDataSet2 = new WindowsFormsApp1.TCandCCDataSet2();
             this.tCandCCDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTCandCCDataSet3 = new WindowsFormsApp1.studentTCandCCDataSet3();
-            this.tblStudentInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_Student_InfoTableAdapter = new WindowsFormsApp1.studentTCandCCDataSet3TableAdapters.tbl_Student_InfoTableAdapter();
-            this.enrollmentNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rollNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.sRNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motherNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.admissionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duesClearedUpToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfLeavingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classPassedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sessionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attendanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tCCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cCCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentTCandCCDataSet4 = new WindowsFormsApp1.studentTCandCCDataSet4();
+            this.tblStudentInfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_Student_InfoTableAdapter1 = new WindowsFormsApp1.studentTCandCCDataSet4TableAdapters.tbl_Student_InfoTableAdapter();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
+            this.tbl_CoursesTableAdapter = new WindowsFormsApp1.studentTCandCCDataSet7TableAdapters.tbl_CoursesTableAdapter();
+            this.tbl_CoursesTableAdapter1 = new WindowsFormsApp1.studentTCandCCDataSet8TableAdapters.tbl_CoursesTableAdapter();
+            this.EnrollmentNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RollNo = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.SRNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MotherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdmissionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DuesClearedUpTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateOfLeaving = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassPassed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Session = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attendance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridShowStudentRecordForCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet3)).BeginInit();
             this.groupSearchByName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dropCourseCC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet7BindingSource)).BeginInit();
             this.searchWithRoll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSearchWithDetailsCC
-            // 
-            this.btnSearchWithDetailsCC.Location = new System.Drawing.Point(374, 37);
-            this.btnSearchWithDetailsCC.Name = "btnSearchWithDetailsCC";
-            this.btnSearchWithDetailsCC.Size = new System.Drawing.Size(100, 23);
-            this.btnSearchWithDetailsCC.TabIndex = 17;
-            this.btnSearchWithDetailsCC.Text = "Search";
-            this.btnSearchWithDetailsCC.UseVisualStyleBackColor = true;
-            this.btnSearchWithDetailsCC.Click += new System.EventHandler(this.btnSearchWithDetailsCC_Click);
-            // 
-            // txtCourseCC
-            // 
-            this.txtCourseCC.Location = new System.Drawing.Point(83, 38);
-            this.txtCourseCC.Name = "txtCourseCC";
-            this.txtCourseCC.Size = new System.Drawing.Size(100, 20);
-            this.txtCourseCC.TabIndex = 16;
             // 
             // lblCourseCC
             // 
             this.lblCourseCC.AutoSize = true;
-            this.lblCourseCC.Location = new System.Drawing.Point(37, 41);
+            this.lblCourseCC.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseCC.Location = new System.Drawing.Point(33, 41);
+            this.lblCourseCC.MaximumSize = new System.Drawing.Size(38, 16);
             this.lblCourseCC.Name = "lblCourseCC";
-            this.lblCourseCC.Size = new System.Drawing.Size(40, 13);
+            this.lblCourseCC.Size = new System.Drawing.Size(38, 14);
             this.lblCourseCC.TabIndex = 15;
             this.lblCourseCC.Text = "Course";
-            // 
-            // txtNameCC
-            // 
-            this.txtNameCC.Location = new System.Drawing.Point(268, 39);
-            this.txtNameCC.Name = "txtNameCC";
-            this.txtNameCC.Size = new System.Drawing.Size(100, 20);
-            this.txtNameCC.TabIndex = 10;
+            this.lblCourseCC.Click += new System.EventHandler(this.lblCourseCC_Click);
             // 
             // lblNameCC
             // 
             this.lblNameCC.AutoSize = true;
-            this.lblNameCC.Location = new System.Drawing.Point(227, 41);
+            this.lblNameCC.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCC.Location = new System.Drawing.Point(215, 41);
             this.lblNameCC.Name = "lblNameCC";
-            this.lblNameCC.Size = new System.Drawing.Size(35, 13);
+            this.lblNameCC.Size = new System.Drawing.Size(34, 14);
             this.lblNameCC.TabIndex = 9;
             this.lblNameCC.Text = "Name";
+            this.lblNameCC.Click += new System.EventHandler(this.lblNameCC_Click);
             // 
             // tableAdapterManager1
             // 
@@ -121,19 +125,13 @@
             this.tableAdapterManager1.tbl_Student_InfoTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = WindowsFormsApp1.studentTCandCCDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // txtRoll
-            // 
-            this.txtRoll.Location = new System.Drawing.Point(72, 36);
-            this.txtRoll.Name = "txtRoll";
-            this.txtRoll.Size = new System.Drawing.Size(100, 20);
-            this.txtRoll.TabIndex = 20;
-            // 
             // lblRoll
             // 
             this.lblRoll.AutoSize = true;
+            this.lblRoll.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoll.Location = new System.Drawing.Point(11, 41);
             this.lblRoll.Name = "lblRoll";
-            this.lblRoll.Size = new System.Drawing.Size(45, 13);
+            this.lblRoll.Size = new System.Drawing.Size(46, 14);
             this.lblRoll.TabIndex = 19;
             this.lblRoll.Text = "Roll No.";
             // 
@@ -143,67 +141,245 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridShowStudentRecordForCC.AutoGenerateColumns = false;
-            this.gridShowStudentRecordForCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridShowStudentRecordForCC.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.gridShowStudentRecordForCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridShowStudentRecordForCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridShowStudentRecordForCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridShowStudentRecordForCC.ColumnHeadersHeight = 30;
             this.gridShowStudentRecordForCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.enrollmentNoDataGridViewTextBoxColumn,
-            this.rollNoDataGridViewTextBoxColumn,
-            this.sRNoDataGridViewTextBoxColumn,
-            this.studentNameDataGridViewTextBoxColumn,
-            this.fatherNameDataGridViewTextBoxColumn,
-            this.motherNameDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.doBDataGridViewTextBoxColumn,
-            this.admissionDateDataGridViewTextBoxColumn,
-            this.duesClearedUpToDataGridViewTextBoxColumn,
-            this.dateOfLeavingDataGridViewTextBoxColumn,
-            this.classPassedDataGridViewTextBoxColumn,
-            this.sessionDataGridViewTextBoxColumn,
-            this.attendanceDataGridViewTextBoxColumn,
-            this.remarkDataGridViewTextBoxColumn,
-            this.tCCreatedDataGridViewTextBoxColumn,
-            this.cCCreatedDataGridViewTextBoxColumn});
+            this.EnrollmentNo,
+            this.RollNo,
+            this.SRNo,
+            this.StudentName,
+            this.FatherName,
+            this.MotherName,
+            this.Address,
+            this.DoB,
+            this.AdmissionDate,
+            this.DuesClearedUpTo,
+            this.DateOfLeaving,
+            this.ClassPassed,
+            this.Session,
+            this.Attendance,
+            this.Remark});
             this.gridShowStudentRecordForCC.DataSource = this.tblStudentInfoBindingSource;
-            this.gridShowStudentRecordForCC.Location = new System.Drawing.Point(13, 118);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(137)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridShowStudentRecordForCC.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridShowStudentRecordForCC.EnableHeadersVisualStyles = false;
+            this.gridShowStudentRecordForCC.Location = new System.Drawing.Point(47, 120);
             this.gridShowStudentRecordForCC.Name = "gridShowStudentRecordForCC";
-            this.gridShowStudentRecordForCC.Size = new System.Drawing.Size(1002, 426);
+            this.gridShowStudentRecordForCC.Size = new System.Drawing.Size(1052, 467);
             this.gridShowStudentRecordForCC.TabIndex = 21;
             this.gridShowStudentRecordForCC.VirtualMode = true;
             // 
+            // tblStudentInfoBindingSource
+            // 
+            this.tblStudentInfoBindingSource.DataMember = "tbl_Student_Info";
+            this.tblStudentInfoBindingSource.DataSource = this.studentTCandCCDataSet3;
+            // 
+            // studentTCandCCDataSet3
+            // 
+            this.studentTCandCCDataSet3.DataSetName = "studentTCandCCDataSet3";
+            this.studentTCandCCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupSearchByName
             // 
+            this.groupSearchByName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupSearchByName.Controls.Add(this.dropCourseCC);
             this.groupSearchByName.Controls.Add(this.btnSearchWithDetailsCC);
             this.groupSearchByName.Controls.Add(this.txtNameCC);
             this.groupSearchByName.Controls.Add(this.lblNameCC);
             this.groupSearchByName.Controls.Add(this.lblCourseCC);
-            this.groupSearchByName.Controls.Add(this.txtCourseCC);
+            this.groupSearchByName.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupSearchByName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.groupSearchByName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupSearchByName.Location = new System.Drawing.Point(47, 12);
             this.groupSearchByName.Name = "groupSearchByName";
-            this.groupSearchByName.Size = new System.Drawing.Size(495, 100);
+            this.groupSearchByName.Size = new System.Drawing.Size(546, 100);
             this.groupSearchByName.TabIndex = 22;
             this.groupSearchByName.TabStop = false;
             this.groupSearchByName.Text = "Search With Details";
             // 
+            // dropCourseCC
+            // 
+            this.dropCourseCC.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
+            this.buttonSpecAny1});
+            this.dropCourseCC.DataSource = this.tblCoursesBindingSource2;
+            this.dropCourseCC.DisplayMember = "courseName";
+            this.dropCourseCC.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlRibbon;
+            this.dropCourseCC.DropDownWidth = 128;
+            this.dropCourseCC.Location = new System.Drawing.Point(77, 36);
+            this.dropCourseCC.Name = "dropCourseCC";
+            this.dropCourseCC.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.dropCourseCC.Size = new System.Drawing.Size(132, 25);
+            this.dropCourseCC.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.dropCourseCC.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.dropCourseCC.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dropCourseCC.StateCommon.ComboBox.Border.Rounding = 5;
+            this.dropCourseCC.TabIndex = 28;
+            this.dropCourseCC.ValueMember = "courseCode";
+            this.dropCourseCC.SelectedIndexChanged += new System.EventHandler(this.dropCourseCC_SelectedIndexChanged_1);
+            // 
+            // buttonSpecAny1
+            // 
+            this.buttonSpecAny1.ColorMap = System.Drawing.Color.Black;
+            this.buttonSpecAny1.UniqueName = "D9B9605E07E246EFDB862BB69ACBC6CE";
+            // 
+            // tblCoursesBindingSource2
+            // 
+            this.tblCoursesBindingSource2.DataMember = "tbl_Courses";
+            this.tblCoursesBindingSource2.DataSource = this.studentTCandCCDataSet8;
+            // 
+            // studentTCandCCDataSet8
+            // 
+            this.studentTCandCCDataSet8.DataSetName = "studentTCandCCDataSet8";
+            this.studentTCandCCDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnSearchWithDetailsCC
+            // 
+            this.btnSearchWithDetailsCC.Location = new System.Drawing.Point(438, 36);
+            this.btnSearchWithDetailsCC.Name = "btnSearchWithDetailsCC";
+            this.btnSearchWithDetailsCC.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchWithDetailsCC.Size = new System.Drawing.Size(96, 29);
+            this.btnSearchWithDetailsCC.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StateCommon.Back.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithDetailsCC.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StateCommon.Border.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchWithDetailsCC.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithDetailsCC.StateCommon.Border.Rounding = 5;
+            this.btnSearchWithDetailsCC.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSearchWithDetailsCC.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSearchWithDetailsCC.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchWithDetailsCC.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StatePressed.Back.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithDetailsCC.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithDetailsCC.StatePressed.Border.ColorAngle = 45F;
+            this.btnSearchWithDetailsCC.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchWithDetailsCC.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithDetailsCC.TabIndex = 20;
+            this.btnSearchWithDetailsCC.Values.Text = "Search";
+            this.btnSearchWithDetailsCC.Click += new System.EventHandler(this.btnSearchWithDetailsCC_Click_1);
+            // 
+            // txtNameCC
+            // 
+            this.txtNameCC.Location = new System.Drawing.Point(255, 37);
+            this.txtNameCC.Name = "txtNameCC";
+            this.txtNameCC.Size = new System.Drawing.Size(177, 27);
+            this.txtNameCC.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.txtNameCC.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.txtNameCC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNameCC.StateCommon.Border.Rounding = 5;
+            this.txtNameCC.TabIndex = 19;
+            this.txtNameCC.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
+            // 
+            // tblCoursesBindingSource
+            // 
+            this.tblCoursesBindingSource.DataMember = "tbl_Courses";
+            this.tblCoursesBindingSource.DataSource = this.studentTCandCCDataSet7;
+            // 
+            // studentTCandCCDataSet7
+            // 
+            this.studentTCandCCDataSet7.DataSetName = "studentTCandCCDataSet7";
+            this.studentTCandCCDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCoursesBindingSource1
+            // 
+            this.tblCoursesBindingSource1.DataMember = "tbl_Courses";
+            this.tblCoursesBindingSource1.DataSource = this.studentTCandCCDataSet7BindingSource;
+            // 
+            // studentTCandCCDataSet7BindingSource
+            // 
+            this.studentTCandCCDataSet7BindingSource.DataSource = this.studentTCandCCDataSet7;
+            this.studentTCandCCDataSet7BindingSource.Position = 0;
+            // 
             // searchWithRoll
             // 
+            this.searchWithRoll.BackColor = System.Drawing.Color.WhiteSmoke;
             this.searchWithRoll.Controls.Add(this.btnSearchWithRollCC);
-            this.searchWithRoll.Controls.Add(this.lblRoll);
             this.searchWithRoll.Controls.Add(this.txtRoll);
-            this.searchWithRoll.Location = new System.Drawing.Point(559, 12);
+            this.searchWithRoll.Controls.Add(this.lblRoll);
+            this.searchWithRoll.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchWithRoll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.searchWithRoll.Location = new System.Drawing.Point(599, 12);
             this.searchWithRoll.Name = "searchWithRoll";
-            this.searchWithRoll.Size = new System.Drawing.Size(302, 100);
+            this.searchWithRoll.Size = new System.Drawing.Size(344, 100);
             this.searchWithRoll.TabIndex = 23;
             this.searchWithRoll.TabStop = false;
             this.searchWithRoll.Text = "Search With Roll No.";
             // 
             // btnSearchWithRollCC
             // 
-            this.btnSearchWithRollCC.Location = new System.Drawing.Point(178, 34);
+            this.btnSearchWithRollCC.Location = new System.Drawing.Point(242, 34);
             this.btnSearchWithRollCC.Name = "btnSearchWithRollCC";
-            this.btnSearchWithRollCC.Size = new System.Drawing.Size(100, 23);
-            this.btnSearchWithRollCC.TabIndex = 18;
-            this.btnSearchWithRollCC.Text = "Search";
-            this.btnSearchWithRollCC.UseVisualStyleBackColor = true;
+            this.btnSearchWithRollCC.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.Size = new System.Drawing.Size(96, 28);
+            this.btnSearchWithRollCC.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.StateCommon.Back.ColorAngle = 45F;
+            this.btnSearchWithRollCC.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithRollCC.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.btnSearchWithRollCC.StateCommon.Border.ColorAngle = 45F;
+            this.btnSearchWithRollCC.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearchWithRollCC.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSearchWithRollCC.StateCommon.Border.Rounding = 5;
+            this.btnSearchWithRollCC.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSearchWithRollCC.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSearchWithRollCC.TabIndex = 21;
+            this.btnSearchWithRollCC.Values.Text = "Search";
             this.btnSearchWithRollCC.Click += new System.EventHandler(this.btnSearchWithRollCC_Click);
+            // 
+            // txtRoll
+            // 
+            this.txtRoll.Location = new System.Drawing.Point(63, 34);
+            this.txtRoll.Name = "txtRoll";
+            this.txtRoll.Size = new System.Drawing.Size(174, 27);
+            this.txtRoll.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.txtRoll.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.txtRoll.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtRoll.StateCommon.Border.Rounding = 5;
+            this.txtRoll.TabIndex = 20;
             // 
             // tCandCCDataSet2
             // 
@@ -215,189 +391,221 @@
             this.tCandCCDataSet2BindingSource.DataSource = this.tCandCCDataSet2;
             this.tCandCCDataSet2BindingSource.Position = 0;
             // 
-            // studentTCandCCDataSet3
-            // 
-            this.studentTCandCCDataSet3.DataSetName = "studentTCandCCDataSet3";
-            this.studentTCandCCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblStudentInfoBindingSource
-            // 
-            this.tblStudentInfoBindingSource.DataMember = "tbl_Student_Info";
-            this.tblStudentInfoBindingSource.DataSource = this.studentTCandCCDataSet3;
-            // 
             // tbl_Student_InfoTableAdapter
             // 
             this.tbl_Student_InfoTableAdapter.ClearBeforeFill = true;
             // 
-            // enrollmentNoDataGridViewTextBoxColumn
+            // studentTCandCCDataSet4
             // 
-            this.enrollmentNoDataGridViewTextBoxColumn.DataPropertyName = "EnrollmentNo";
-            this.enrollmentNoDataGridViewTextBoxColumn.HeaderText = "EnrollmentNo";
-            this.enrollmentNoDataGridViewTextBoxColumn.Name = "enrollmentNoDataGridViewTextBoxColumn";
+            this.studentTCandCCDataSet4.DataSetName = "studentTCandCCDataSet4";
+            this.studentTCandCCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rollNoDataGridViewTextBoxColumn
+            // tblStudentInfoBindingSource1
             // 
-            this.rollNoDataGridViewTextBoxColumn.DataPropertyName = "RollNo";
-            this.rollNoDataGridViewTextBoxColumn.HeaderText = "RollNo";
-            this.rollNoDataGridViewTextBoxColumn.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.rollNoDataGridViewTextBoxColumn.LinkColor = System.Drawing.Color.Black;
-            this.rollNoDataGridViewTextBoxColumn.Name = "rollNoDataGridViewTextBoxColumn";
-            this.rollNoDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.rollNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.rollNoDataGridViewTextBoxColumn.VisitedLinkColor = System.Drawing.Color.Black;
+            this.tblStudentInfoBindingSource1.DataMember = "tbl_Student_Info";
+            this.tblStudentInfoBindingSource1.DataSource = this.studentTCandCCDataSet4;
             // 
-            // sRNoDataGridViewTextBoxColumn
+            // tbl_Student_InfoTableAdapter1
             // 
-            this.sRNoDataGridViewTextBoxColumn.DataPropertyName = "SRNo";
-            this.sRNoDataGridViewTextBoxColumn.HeaderText = "SRNo";
-            this.sRNoDataGridViewTextBoxColumn.Name = "sRNoDataGridViewTextBoxColumn";
+            this.tbl_Student_InfoTableAdapter1.ClearBeforeFill = true;
             // 
-            // studentNameDataGridViewTextBoxColumn
+            // kryptonPalette1
             // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "StudentName";
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             // 
-            // fatherNameDataGridViewTextBoxColumn
+            // tbl_CoursesTableAdapter
             // 
-            this.fatherNameDataGridViewTextBoxColumn.DataPropertyName = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn.HeaderText = "FatherName";
-            this.fatherNameDataGridViewTextBoxColumn.Name = "fatherNameDataGridViewTextBoxColumn";
+            this.tbl_CoursesTableAdapter.ClearBeforeFill = true;
             // 
-            // motherNameDataGridViewTextBoxColumn
+            // tbl_CoursesTableAdapter1
             // 
-            this.motherNameDataGridViewTextBoxColumn.DataPropertyName = "MotherName";
-            this.motherNameDataGridViewTextBoxColumn.HeaderText = "MotherName";
-            this.motherNameDataGridViewTextBoxColumn.Name = "motherNameDataGridViewTextBoxColumn";
+            this.tbl_CoursesTableAdapter1.ClearBeforeFill = true;
             // 
-            // addressDataGridViewTextBoxColumn
+            // EnrollmentNo
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.EnrollmentNo.DataPropertyName = "EnrollmentNo";
+            this.EnrollmentNo.HeaderText = "EnrollmentNo";
+            this.EnrollmentNo.Name = "EnrollmentNo";
             // 
-            // doBDataGridViewTextBoxColumn
+            // RollNo
             // 
-            this.doBDataGridViewTextBoxColumn.DataPropertyName = "DoB";
-            this.doBDataGridViewTextBoxColumn.HeaderText = "DoB";
-            this.doBDataGridViewTextBoxColumn.Name = "doBDataGridViewTextBoxColumn";
+            this.RollNo.DataPropertyName = "RollNo";
+            this.RollNo.HeaderText = "RollNo";
+            this.RollNo.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.RollNo.Name = "RollNo";
+            this.RollNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.RollNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // admissionDateDataGridViewTextBoxColumn
+            // SRNo
             // 
-            this.admissionDateDataGridViewTextBoxColumn.DataPropertyName = "AdmissionDate";
-            this.admissionDateDataGridViewTextBoxColumn.HeaderText = "AdmissionDate";
-            this.admissionDateDataGridViewTextBoxColumn.Name = "admissionDateDataGridViewTextBoxColumn";
+            this.SRNo.DataPropertyName = "SRNo";
+            this.SRNo.HeaderText = "SRNo";
+            this.SRNo.Name = "SRNo";
             // 
-            // duesClearedUpToDataGridViewTextBoxColumn
+            // StudentName
             // 
-            this.duesClearedUpToDataGridViewTextBoxColumn.DataPropertyName = "DuesClearedUpTo";
-            this.duesClearedUpToDataGridViewTextBoxColumn.HeaderText = "DuesClearedUpTo";
-            this.duesClearedUpToDataGridViewTextBoxColumn.Name = "duesClearedUpToDataGridViewTextBoxColumn";
+            this.StudentName.DataPropertyName = "StudentName";
+            this.StudentName.HeaderText = "StudentName";
+            this.StudentName.Name = "StudentName";
             // 
-            // dateOfLeavingDataGridViewTextBoxColumn
+            // FatherName
             // 
-            this.dateOfLeavingDataGridViewTextBoxColumn.DataPropertyName = "DateOfLeaving";
-            this.dateOfLeavingDataGridViewTextBoxColumn.HeaderText = "DateOfLeaving";
-            this.dateOfLeavingDataGridViewTextBoxColumn.Name = "dateOfLeavingDataGridViewTextBoxColumn";
+            this.FatherName.DataPropertyName = "FatherName";
+            this.FatherName.HeaderText = "FatherName";
+            this.FatherName.Name = "FatherName";
             // 
-            // classPassedDataGridViewTextBoxColumn
+            // MotherName
             // 
-            this.classPassedDataGridViewTextBoxColumn.DataPropertyName = "ClassPassed";
-            this.classPassedDataGridViewTextBoxColumn.HeaderText = "ClassPassed";
-            this.classPassedDataGridViewTextBoxColumn.Name = "classPassedDataGridViewTextBoxColumn";
+            this.MotherName.DataPropertyName = "MotherName";
+            this.MotherName.HeaderText = "MotherName";
+            this.MotherName.Name = "MotherName";
             // 
-            // sessionDataGridViewTextBoxColumn
+            // Address
             // 
-            this.sessionDataGridViewTextBoxColumn.DataPropertyName = "Session";
-            this.sessionDataGridViewTextBoxColumn.HeaderText = "Session";
-            this.sessionDataGridViewTextBoxColumn.Name = "sessionDataGridViewTextBoxColumn";
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
             // 
-            // attendanceDataGridViewTextBoxColumn
+            // DoB
             // 
-            this.attendanceDataGridViewTextBoxColumn.DataPropertyName = "Attendance";
-            this.attendanceDataGridViewTextBoxColumn.HeaderText = "Attendance";
-            this.attendanceDataGridViewTextBoxColumn.Name = "attendanceDataGridViewTextBoxColumn";
+            this.DoB.DataPropertyName = "DoB";
+            this.DoB.HeaderText = "DoB";
+            this.DoB.Name = "DoB";
             // 
-            // remarkDataGridViewTextBoxColumn
+            // AdmissionDate
             // 
-            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "Remark";
-            this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
-            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
+            this.AdmissionDate.DataPropertyName = "AdmissionDate";
+            this.AdmissionDate.HeaderText = "AdmissionDate";
+            this.AdmissionDate.Name = "AdmissionDate";
             // 
-            // tCCreatedDataGridViewTextBoxColumn
+            // DuesClearedUpTo
             // 
-            this.tCCreatedDataGridViewTextBoxColumn.DataPropertyName = "TCCreated";
-            this.tCCreatedDataGridViewTextBoxColumn.HeaderText = "TCCreated";
-            this.tCCreatedDataGridViewTextBoxColumn.Name = "tCCreatedDataGridViewTextBoxColumn";
+            this.DuesClearedUpTo.DataPropertyName = "DuesClearedUpTo";
+            this.DuesClearedUpTo.HeaderText = "DuesClearedUpTo";
+            this.DuesClearedUpTo.Name = "DuesClearedUpTo";
             // 
-            // cCCreatedDataGridViewTextBoxColumn
+            // DateOfLeaving
             // 
-            this.cCCreatedDataGridViewTextBoxColumn.DataPropertyName = "CCCreated";
-            this.cCCreatedDataGridViewTextBoxColumn.HeaderText = "CCCreated";
-            this.cCCreatedDataGridViewTextBoxColumn.Name = "cCCreatedDataGridViewTextBoxColumn";
+            this.DateOfLeaving.DataPropertyName = "DateOfLeaving";
+            this.DateOfLeaving.HeaderText = "DateOfLeaving";
+            this.DateOfLeaving.Name = "DateOfLeaving";
+            // 
+            // ClassPassed
+            // 
+            this.ClassPassed.DataPropertyName = "ClassPassed";
+            this.ClassPassed.HeaderText = "ClassPassed";
+            this.ClassPassed.Name = "ClassPassed";
+            // 
+            // Session
+            // 
+            this.Session.DataPropertyName = "Session";
+            this.Session.HeaderText = "Session";
+            this.Session.Name = "Session";
+            // 
+            // Attendance
+            // 
+            this.Attendance.DataPropertyName = "Attendance";
+            this.Attendance.HeaderText = "Attendance";
+            this.Attendance.Name = "Attendance";
+            // 
+            // Remark
+            // 
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
             // 
             // GenerateCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 557);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.ClientSize = new System.Drawing.Size(1078, 598);
             this.Controls.Add(this.searchWithRoll);
             this.Controls.Add(this.groupSearchByName);
             this.Controls.Add(this.gridShowStudentRecordForCC);
             this.Name = "GenerateCC";
             this.Padding = new System.Windows.Forms.Padding(10);
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateCC";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GenerateCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridShowStudentRecordForCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet3)).EndInit();
             this.groupSearchByName.ResumeLayout(false);
             this.groupSearchByName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dropCourseCC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCoursesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet7BindingSource)).EndInit();
             this.searchWithRoll.ResumeLayout(false);
             this.searchWithRoll.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tCandCCDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentTCandCCDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentInfoBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSearchWithDetailsCC;
-        private System.Windows.Forms.TextBox txtCourseCC;
         private System.Windows.Forms.Label lblCourseCC;
-        private System.Windows.Forms.TextBox txtNameCC;
         private System.Windows.Forms.Label lblNameCC;
         private studentTCandCCDataSet1TableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.TextBox txtRoll;
         private System.Windows.Forms.Label lblRoll;
         private System.Windows.Forms.DataGridView gridShowStudentRecordForCC;
         private System.Windows.Forms.GroupBox groupSearchByName;
         private System.Windows.Forms.GroupBox searchWithRoll;
-        private System.Windows.Forms.Button btnSearchWithRollCC;
         private System.Windows.Forms.BindingSource tCandCCDataSet2BindingSource;
         private TCandCCDataSet2 tCandCCDataSet2;
         private studentTCandCCDataSet3 studentTCandCCDataSet3;
         private System.Windows.Forms.BindingSource tblStudentInfoBindingSource;
         private studentTCandCCDataSet3TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enrollmentNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewLinkColumn rollNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sRNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motherNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn admissionDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duesClearedUpToDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateOfLeavingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn classPassedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sessionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attendanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tCCreatedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCCreatedDataGridViewTextBoxColumn;
+        private studentTCandCCDataSet4 studentTCandCCDataSet4;
+        private System.Windows.Forms.BindingSource tblStudentInfoBindingSource1;
+        private studentTCandCCDataSet4TableAdapters.tbl_Student_InfoTableAdapter tbl_Student_InfoTableAdapter1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNameCC;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSearchWithDetailsCC;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSearchWithRollCC;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtRoll;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox dropCourseCC;
+        private ComponentFactory.Krypton.Toolkit.ButtonSpecAny buttonSpecAny1;
+        private studentTCandCCDataSet7 studentTCandCCDataSet7;
+        private System.Windows.Forms.BindingSource tblCoursesBindingSource;
+        private studentTCandCCDataSet7TableAdapters.tbl_CoursesTableAdapter tbl_CoursesTableAdapter;
+        private System.Windows.Forms.BindingSource studentTCandCCDataSet7BindingSource;
+        private System.Windows.Forms.BindingSource tblCoursesBindingSource1;
+        private studentTCandCCDataSet8 studentTCandCCDataSet8;
+        private System.Windows.Forms.BindingSource tblCoursesBindingSource2;
+        private studentTCandCCDataSet8TableAdapters.tbl_CoursesTableAdapter tbl_CoursesTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EnrollmentNo;
+        private System.Windows.Forms.DataGridViewLinkColumn RollNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FatherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MotherName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdmissionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DuesClearedUpTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateOfLeaving;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClassPassed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Session;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Attendance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
     }
 }

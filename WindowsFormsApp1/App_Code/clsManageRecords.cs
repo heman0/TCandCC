@@ -26,6 +26,8 @@ namespace WindowsFormsApp1.App_Code
         public string session { get; set; }
         public long attendance { get; set; }
         public string remark { get; set; }
+        public string courseCode { get; set; }
+
 
 
         public DataSet fetchAllRecordsForUpdate()
@@ -42,7 +44,8 @@ namespace WindowsFormsApp1.App_Code
         {
             SqlParameter[] pArr =
                 {
-                new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchStudentRecordForCC" }
+                new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchStudentRecordForCC" },
+                 new SqlParameter("courseCode", SqlDbType.VarChar) { Value =courseCode }
             };
             DataSet ds = SqlHelper.ExecuteDataset(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
             return ds;
@@ -68,7 +71,7 @@ namespace WindowsFormsApp1.App_Code
                 new SqlParameter("RollNo", SqlDbType.BigInt) { Value = 0 },
                 new SqlParameter("action", SqlDbType.VarChar) { Value = "fetchSpecficStudentRecordForCC" },
                  new SqlParameter("studentName", SqlDbType.VarChar) { Value =  name},
-                  new SqlParameter("classPassed", SqlDbType.VarChar) { Value = classPassed}
+                  new SqlParameter("courseCode", SqlDbType.VarChar) { Value = courseCode}
             };
                 ds = SqlHelper.ExecuteDataset(Utility.strconn, CommandType.StoredProcedure, SProcedures.manageStudent, pArr);
                
@@ -89,7 +92,7 @@ namespace WindowsFormsApp1.App_Code
             SqlParameter[] pArr =
                      {
                                new SqlParameter("@action", SqlDbType.VarChar) { Value = "updateStudentRecord" },
-                             new SqlParameter("EnrollmentNo", SqlDbType.BigInt) { Value = Enroll },
+                             new SqlParameter("@EnrollmentNo", SqlDbType.BigInt) { Value = Enroll },
                              new SqlParameter("@studentName", SqlDbType.VarChar) { Value =  name},
                               new SqlParameter("@fatherName", SqlDbType.VarChar) { Value =  fatherName},
                                new SqlParameter("@motherName", SqlDbType.VarChar) { Value =  motherName},

@@ -23,10 +23,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
             
         }
-        public void fillData(long EnrollmentID, long RollNo, string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeave, string classPassed, string session, long attendance,string Remark, string studentPicture, string tcCreated, string ccCreated)
+        public void fillData(long EnrollmentID, long RollNo, string name, string fatherName, string motherName, string address, string dob, string admissionDate, string duesCleared, string dateOfLeave, string classPassed, string session, string attendance,string Remark)
         {
-            Enrollment =Convert.ToInt64( EnrollmentID.ToString());
-            lblEnroll.Text = Enrollment.ToString();
+            Enrollment = Convert.ToInt64( EnrollmentID.ToString());
+            lblEnrollmentValue.Text = Enrollment.ToString();
             lblRollValue.Text = RollNo.ToString();
             txtName.Text = name;
             txtFatherName.Text = fatherName;
@@ -40,7 +40,6 @@ namespace WindowsFormsApp1
             txtSession.Text= session;
             txtAttendance.Text = attendance.ToString();
             txtRemark.Text = Remark;
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,7 +74,7 @@ namespace WindowsFormsApp1
             cls.attendance= Convert.ToInt64( txtAttendance.Text);
             cls.remark=txtRemark.Text;
             int res=cls.updateStudentRecord();
-            if (res>0)
+            if (res!=null)
             {
                 MessageBox.Show("Updated successfully...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
